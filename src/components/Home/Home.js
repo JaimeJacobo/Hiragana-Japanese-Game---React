@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.min.css';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 	return (
