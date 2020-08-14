@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.min.css';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Home = () => {
 	return (
@@ -10,7 +10,7 @@ const Home = () => {
 				<Link to="/letters">Play letters game</Link>
 			</div>
 			<div className="link">
-				<Link to="/words">Play words game</Link>
+				<Link to="/words">Play words game (soon)</Link>
 			</div>
 		</div>
 	);

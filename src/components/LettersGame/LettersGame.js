@@ -1,48 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './LettersGame.min.css';
 
 const LettersGame = (props) => {
-	let letters = props.letters;
+	let lettersDayOne = props.letters.lettersDayOne;
+	let lettersDayTwo = props.letters.lettersDayTwo;
+
+	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
-	// const [ previousAnswer, setPreviousAnswer ] = useState({ hiragana_letter: 'hola' });
-	let previousAnswer = { hiragana_letter: 'hola' };
 
 	const [ valueFromInput, setValueFromInput ] = useState('');
 	const [ feedbackAnswer, setFeedbackAnswer ] = useState('');
-
-	useEffect(() => {
-		getRandomLetter();
-	}, []);
+	const [ groupOfLetters, setGroupOfLetters ] = useState([]);
 
 	const changePreviousAnswer = () => {
 		previousAnswer = correctAnswerObject.hiragana_letter;
 	};
 
 	const getRandomIndex = () => {
-		return Math.floor(Math.random() * letters.length);
+		return Math.floor(Math.random() * groupOfLetters.length);
 	};
 
-	const checkForPreviousAnswer = (hiraganaLetter) => {
+	const checkForSamePreviousAnswer = (hiraganaLetter) => {
 		if (hiraganaLetter === previousAnswer) {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	};
 
 	const getRandomLetter = () => {
 		changePreviousAnswer();
 		const randomIndex = getRandomIndex();
-		console.log(checkForPreviousAnswer(letters[randomIndex].hiragana_letter))
-		if (checkForPreviousAnswer(letters[randomIndex].hiragana_letter)) {
-			setCorrectAnswerObject(letters[randomIndex]);
-			renderRandomLetter();
-		} else {
+		if (checkForSamePreviousAnswer(groupOfLetters[randomIndex].hiragana_letter)) {
 			getRandomLetter();
+		} else {
+			setCorrectAnswerObject(groupOfLetters[randomIndex]);
+			renderRandomLetter();
 		}
 	};
 
 	const renderRandomLetter = () => {
-		return correctAnswerObject.hiragana_letter;
+		if (correctAnswerObject.hiragana_letter === ':)') {
+			renderFirstQuestion();
+			return correctAnswerObject.hiragana_letter;
+		} else {
+			return correctAnswerObject.hiragana_letter;
+		}
 	};
 
 	const clearInputs = () => {
@@ -57,15 +59,19 @@ const LettersGame = (props) => {
 		}, 1000);
 	};
 
+	const renderFirstQuestion = () => {
+		setCorrectAnswerObject(groupOfLetters[getRandomIndex()]);
+	};
+
 	const getFeedbackMessage = (answer) => {
 		answer ? setFeedbackAnswer('Correcto!') : setFeedbackAnswer('Incorrecto :(');
-		nextQuestion();
 	};
 
 	const checkForAnswer = () => {
 		const inputAnswer = valueFromInput;
 		const correctAnswer = correctAnswerObject.latin_letter;
 		inputAnswer === correctAnswer ? getFeedbackMessage(true) : getFeedbackMessage();
+		nextQuestion();
 	};
 
 	const renderFeedback = () => {
@@ -74,14 +80,28 @@ const LettersGame = (props) => {
 
 	return (
 		<div className="LettersGame">
-			<div className="letter">{renderRandomLetter()}</div>
-			<input type="text" value={valueFromInput} onChange={(event) => setValueFromInput(event.target.value)} />
-			<button className="inputButton" onClick={() => checkForAnswer()}>
-				Check answer
-			</button>
-			<div className="feedback_container">
-				<p>{renderFeedback()}</p>
-			</div>
+			{groupOfLetters.length === 0 ? (
+				<React.Fragment>
+					<h2>Select the group of letters you want to play with</h2>
+					<button onClick={() => setGroupOfLetters(lettersDayOne)}>Day 1</button>
+					<button onClick={() => setGroupOfLetters(lettersDayTwo)}>Day 2</button>
+				</React.Fragment>
+			) : (
+				<React.Fragment>
+					<div className="letter">{renderRandomLetter()}</div>
+					<input
+						type="text"
+						value={valueFromInput}
+						onChange={(event) => setValueFromInput(event.target.value)}
+					/>
+					<button className="inputButton" onClick={() => checkForAnswer()}>
+						Check answer
+					</button>
+					<div className="feedback_container">
+						<p>{renderFeedback()}</p>
+					</div>
+				</React.Fragment>
+			)}
 		</div>
 	);
 };
