@@ -88,7 +88,6 @@ const LettersGame = (props) => {
 				</React.Fragment>
 			) : (
 				<React.Fragment>
-					<div className="letter">{renderRandomLetter()}</div>
 					<input
 						type="text"
 						value={valueFromInput}
@@ -100,6 +99,7 @@ const LettersGame = (props) => {
 					<div className="feedback_container">
 						<p>{renderFeedback()}</p>
 					</div>
+					<div className="letter">{renderRandomLetter()}</div>
 				</React.Fragment>
 			)}
 		</div>

@@ -6,7 +6,6 @@ const Home = () => {
 	return (
 		<div className="Home">
 			<h1>Hiragana Game</h1>
-
 			<div className="link">
 				<Link to="/letters">Play letters game</Link>
 			</div>
