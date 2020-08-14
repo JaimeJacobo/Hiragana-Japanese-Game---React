@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Hiragana-Japanese-Game---React/static/css/main.3f369603.chunk.css",
+    "main.js": "/Hiragana-Japanese-Game---React/static/js/main.bfda323d.chunk.js",
+    "main.js.map": "/Hiragana-Japanese-Game---React/static/js/main.bfda323d.chunk.js.map",
+    "runtime-main.js": "/Hiragana-Japanese-Game---React/static/js/runtime-main.23336087.js",
+    "runtime-main.js.map": "/Hiragana-Japanese-Game---React/static/js/runtime-main.23336087.js.map",
+    "static/js/2.f6ee097d.chunk.js": "/Hiragana-Japanese-Game---React/static/js/2.f6ee097d.chunk.js",
+    "static/js/2.f6ee097d.chunk.js.map": "/Hiragana-Japanese-Game---React/static/js/2.f6ee097d.chunk.js.map",
+    "index.html": "/Hiragana-Japanese-Game---React/index.html",
+    "precache-manifest.cde3e0c630f7bba201ee3f139309b368.js": "/Hiragana-Japanese-Game---React/precache-manifest.cde3e0c630f7bba201ee3f139309b368.js",
+    "service-worker.js": "/Hiragana-Japanese-Game---React/service-worker.js",
+    "static/css/main.3f369603.chunk.css.map": "/Hiragana-Japanese-Game---React/static/css/main.3f369603.chunk.css.map",
+    "static/js/2.f6ee097d.chunk.js.LICENSE.txt": "/Hiragana-Japanese-Game---React/static/js/2.f6ee097d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23336087.js",
+    "static/js/2.f6ee097d.chunk.js",
+    "static/css/main.3f369603.chunk.css",
+    "static/js/main.bfda323d.chunk.js"
+  ]
+}
