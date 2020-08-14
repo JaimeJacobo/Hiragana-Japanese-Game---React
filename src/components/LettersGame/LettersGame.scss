@@ -5,6 +5,11 @@
 	justify-content: flex-start;
 	align-items: center;
 
+	.selectLetterButton{
+		padding: 5px;
+		margin: 7px;
+	}
+
 	.letter {
 		font-family: sans-serif;
 		font-size: 80vw;

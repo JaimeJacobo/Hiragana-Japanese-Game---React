@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './LettersGame.min.css';
 
 const LettersGame = (props) => {
-	let lettersDayOne = props.letters.lettersDayOne;
-	let lettersDayTwo = props.letters.lettersDayTwo;
+	const lettersDayOne = props.letters.lettersDayOne;
+	const lettersDayTwo = props.letters.lettersDayTwo;
+	const allLetters = [ ...lettersDayOne, ...lettersDayTwo ];
 
 	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
@@ -41,10 +42,9 @@ const LettersGame = (props) => {
 	const renderRandomLetter = () => {
 		if (correctAnswerObject.hiragana_letter === ':)') {
 			renderFirstQuestion();
-			return correctAnswerObject.hiragana_letter;
-		} else {
-			return correctAnswerObject.hiragana_letter;
 		}
+
+		return correctAnswerObject.hiragana_letter;
 	};
 
 	const clearInputs = () => {
@@ -83,8 +83,15 @@ const LettersGame = (props) => {
 			{groupOfLetters.length === 0 ? (
 				<React.Fragment>
 					<h2>Select the group of letters you want to play with</h2>
-					<button onClick={() => setGroupOfLetters(lettersDayOne)}>Day 1</button>
-					<button onClick={() => setGroupOfLetters(lettersDayTwo)}>Day 2</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
+						All letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayOne)}>
+						Day 1
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayTwo)}>
+						Day 2
+					</button>
 				</React.Fragment>
 			) : (
 				<React.Fragment>
