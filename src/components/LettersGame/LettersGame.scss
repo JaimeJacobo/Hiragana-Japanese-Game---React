@@ -1,11 +1,9 @@
 .LettersGame {
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding-top: 80px;
 
 	.letter {
 		font-family: sans-serif;
