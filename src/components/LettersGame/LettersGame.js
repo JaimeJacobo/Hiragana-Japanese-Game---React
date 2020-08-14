@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './LettersGame.min.css';
 
 const LettersGame = (props) => {
-	const letters = useState(props.letters)[0];
+	let letters = props.letters;
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
-	const [ previousAnswer, setPreviousAnswer ] = useState({ hiragana_letter: 'hola' });
+	// const [ previousAnswer, setPreviousAnswer ] = useState({ hiragana_letter: 'hola' });
+	let previousAnswer = { hiragana_letter: 'hola' };
+
 	const [ valueFromInput, setValueFromInput ] = useState('');
 	const [ feedbackAnswer, setFeedbackAnswer ] = useState('');
 
@@ -13,7 +15,7 @@ const LettersGame = (props) => {
 	}, []);
 
 	const changePreviousAnswer = () => {
-		setPreviousAnswer(correctAnswerObject.hiragana_letter);
+		previousAnswer = correctAnswerObject.hiragana_letter;
 	};
 
 	const getRandomIndex = () => {
@@ -30,6 +32,7 @@ const LettersGame = (props) => {
 	const getRandomLetter = () => {
 		changePreviousAnswer();
 		const randomIndex = getRandomIndex();
+		console.log(checkForPreviousAnswer(letters[randomIndex].hiragana_letter))
 		if (checkForPreviousAnswer(letters[randomIndex].hiragana_letter)) {
 			setCorrectAnswerObject(letters[randomIndex]);
 			renderRandomLetter();
@@ -65,19 +68,17 @@ const LettersGame = (props) => {
 		inputAnswer === correctAnswer ? getFeedbackMessage(true) : getFeedbackMessage();
 	};
 
-	const renderFeedback = ()=>{
+	const renderFeedback = () => {
 		return feedbackAnswer;
 	};
 
 	return (
 		<div className="LettersGame">
 			<div className="letter">{renderRandomLetter()}</div>
-			<input
-				type="text"
-				value={valueFromInput}
-				onChange={(event) => setValueFromInput(event.target.value)}
-			/>
-			<button className="inputButton" onClick={()=>checkForAnswer()}>Check answer</button>
+			<input type="text" value={valueFromInput} onChange={(event) => setValueFromInput(event.target.value)} />
+			<button className="inputButton" onClick={() => checkForAnswer()}>
+				Check answer
+			</button>
 			<div className="feedback_container">
 				<p>{renderFeedback()}</p>
 			</div>
