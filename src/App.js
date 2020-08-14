@@ -1,17 +1,15 @@
 import React from 'react';
-import './App.css';
 import Home from './components/Home/Home';
 import LettersGame from './components/LettersGame/LettersGame';
 import WordsGame from './components/WordsGame/WordsGame';
 import lettersDayOne from './json/lettersDayOne.json';
 import lettersDayTwo from './json/lettersDayTwo.json';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Div100vh from 'react-div-100vh';
+
 
 const App = () => {
 	return (
-		<Div100vh>
-			<div className="App">
+		<div className="App">
 				<Router>
 					<div>
 						<Route path="/" exact component={() => <Home />} />
@@ -25,8 +23,7 @@ const App = () => {
 						<Route exact path="/words" component={() => <WordsGame />} />
 					</div>
 				</Router>
-			</div>
-		</Div100vh>
+		</div>
 	);
 };
 

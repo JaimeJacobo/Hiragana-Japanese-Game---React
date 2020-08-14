@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LettersGame.min.css';
+import Div100vh from 'react-div-100vh';
 
 const LettersGame = (props) => {
 	let lettersDayOne = props.letters.lettersDayOne;
@@ -79,30 +80,32 @@ const LettersGame = (props) => {
 	};
 
 	return (
-		<div className="LettersGame">
-			{groupOfLetters.length === 0 ? (
-				<React.Fragment>
-					<h2>Select the group of letters you want to play with</h2>
-					<button onClick={() => setGroupOfLetters(lettersDayOne)}>Day 1</button>
-					<button onClick={() => setGroupOfLetters(lettersDayTwo)}>Day 2</button>
-				</React.Fragment>
-			) : (
-				<React.Fragment>
-					<input
-						type="text"
-						value={valueFromInput}
-						onChange={(event) => setValueFromInput(event.target.value)}
-					/>
-					<button className="inputButton" onClick={() => checkForAnswer()}>
-						Check answer
-					</button>
-					<div className="feedback_container">
-						<p>{renderFeedback()}</p>
-					</div>
+		<Div100vh>
+			<div className="LettersGame">
+				{groupOfLetters.length === 0 ? (
+					<React.Fragment>
+						<h2>Select the group of letters you want to play with</h2>
+						<button onClick={() => setGroupOfLetters(lettersDayOne)}>Day 1</button>
+						<button onClick={() => setGroupOfLetters(lettersDayTwo)}>Day 2</button>
+					</React.Fragment>
+				) : (
+					<React.Fragment>
 					<div className="letter">{renderRandomLetter()}</div>
-				</React.Fragment>
-			)}
-		</div>
+						<input
+							type="text"
+							value={valueFromInput}
+							onChange={(event) => setValueFromInput(event.target.value)}
+						/>
+						<button className="inputButton" onClick={() => checkForAnswer()}>
+							Check answer
+						</button>
+						<div className="feedback_container">
+							<p>{renderFeedback()}</p>
+						</div>
+					</React.Fragment>
+				)}
+			</div>
+		</Div100vh>
 	);
 };
 
