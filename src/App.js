@@ -8,20 +8,19 @@ import lettersDayTwo from './json/lettersDayTwo.json';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = () => {
-
-
 	return (
 		<div className="App">
 			<Router>
 				<div>
 					<Route path="/" exact component={() => <Home />} />
 					<Route
+						exact
 						path="/letters"
 						component={() => (
 							<LettersGame letters={{ lettersDayOne: lettersDayOne, lettersDayTwo: lettersDayTwo }} />
 						)}
 					/>
-					<Route path="/words" component={() => <WordsGame />} />
+					<Route exact path="/words" component={() => <WordsGame />} />
 				</div>
 			</Router>
 		</div>
