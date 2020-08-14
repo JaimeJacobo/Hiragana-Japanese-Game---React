@@ -46,5 +46,17 @@
 	{
 		"hiragana_letter": "ま",
 		"latin_letter": "ma"
+	},
+	{
+		"hiragana_letter": "ら",
+		"latin_letter": "ra"
+	},
+	{
+		"hiragana_letter": "わ",
+		"latin_letter": "wa"
+	},
+	{
+		"hiragana_letter": "こ",
+		"latin_letter": "ko"
 	}
 ]

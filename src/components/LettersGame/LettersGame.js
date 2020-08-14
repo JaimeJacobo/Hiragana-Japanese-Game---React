@@ -12,6 +12,7 @@ const LettersGame = (props) => {
 	const [ valueFromInput, setValueFromInput ] = useState('');
 	const [ feedbackAnswer, setFeedbackAnswer ] = useState('');
 	const [ groupOfLetters, setGroupOfLetters ] = useState([]);
+	const [ streak, setStreak ] = useState(0);
 
 	const changePreviousAnswer = () => {
 		previousAnswer = correctAnswerObject.hiragana_letter;
@@ -63,8 +64,18 @@ const LettersGame = (props) => {
 		setCorrectAnswerObject(groupOfLetters[getRandomIndex()]);
 	};
 
+	const updateStreak = (reset) => {
+		reset ? setStreak(0) : setStreak(streak + 1);
+	};
+
 	const getFeedbackMessage = (answer) => {
-		answer ? setFeedbackAnswer('Correcto!') : setFeedbackAnswer('Incorrecto :(');
+		if (answer) {
+			setFeedbackAnswer('Correcto!');
+			updateStreak();
+		} else {
+			setFeedbackAnswer('Incorrecto :(');
+			updateStreak('reset');
+		}
 	};
 
 	const checkForAnswer = () => {
@@ -78,23 +89,32 @@ const LettersGame = (props) => {
 		return feedbackAnswer;
 	};
 
+	const renderSelectGroupScreen = () => {
+		return (
+			<React.Fragment>
+				<h2>Select the group of letters you want to play with</h2>
+				<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
+					All letters
+				</button>
+				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayOne)}>
+					Day 1
+				</button>
+				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayTwo)}>
+					Day 2
+				</button>
+			</React.Fragment>
+		);
+	};
+
 	return (
 		<div className="LettersGame">
 			{groupOfLetters.length === 0 ? (
-				<React.Fragment>
-					<h2>Select the group of letters you want to play with</h2>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
-						All letters
-					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayOne)}>
-						Day 1
-					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayTwo)}>
-						Day 2
-					</button>
-				</React.Fragment>
+				renderSelectGroupScreen()
 			) : (
 				<React.Fragment>
+					<div>
+						<p className="streak">Streak: {streak}</p>
+					</div>
 					<div className="letter">{renderRandomLetter()}</div>
 					<input
 						type="text"
