@@ -46,5 +46,17 @@
 	{
 		"hiragana_letter": "ひ",
 		"latin_letter": "hi"
+	},
+	{
+		"hiragana_letter": "へ",
+		"latin_letter": "he"
+	},
+	{
+		"hiragana_letter": "え",
+		"latin_letter": "e"
+	},
+	{
+		"hiragana_letter": "そ",
+		"latin_letter": "so"
 	}
 ]
