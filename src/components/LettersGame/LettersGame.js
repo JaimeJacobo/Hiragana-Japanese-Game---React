@@ -4,7 +4,8 @@ import './LettersGame.min.css';
 const LettersGame = (props) => {
 	const lettersDayOne = props.letters.lettersDayOne;
 	const lettersDayTwo = props.letters.lettersDayTwo;
-	const allLetters = [ ...lettersDayOne, ...lettersDayTwo ];
+	const lettersDayThree = props.letters.lettersDayThree;
+	const allLetters = [ ...lettersDayOne, ...lettersDayTwo, ...lettersDayThree ];
 
 	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
@@ -92,7 +93,7 @@ const LettersGame = (props) => {
 	const renderSelectGroupScreen = () => {
 		return (
 			<React.Fragment>
-				<h2>Select the group of letters you want to play with</h2>
+				<h2 className="selectGroupScreen_title">Select the group of letters you want to play with</h2>
 				<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
 					All letters
 				</button>
@@ -102,35 +103,36 @@ const LettersGame = (props) => {
 				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayTwo)}>
 					Day 2
 				</button>
+				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayThree)}>
+					Day 3
+				</button>
 			</React.Fragment>
 		);
 	};
 
-	return (
-		<div className="LettersGame">
-			{groupOfLetters.length === 0 ? (
-				renderSelectGroupScreen()
-			) : (
-				<React.Fragment>
-					<div>
-						<p className="streak">Streak: {streak}</p>
-					</div>
-					<div className="letter">{renderRandomLetter()}</div>
-					<input
-						type="text"
-						value={valueFromInput}
-						onChange={(event) => setValueFromInput(event.target.value.toLowerCase())}
-					/>
-					<button className="inputButton" onClick={() => checkForAnswer()}>
-						Check answer
-					</button>
-					<div className="feedback_container">
-						<p>{renderFeedback()}</p>
-					</div>
-				</React.Fragment>
-			)}
-		</div>
-	);
+	const renderGame = () => {
+		return (
+			<React.Fragment>
+				<div>
+					<p className="streak">Streak: {streak}</p>
+				</div>
+				<div className="letter">{renderRandomLetter()}</div>
+				<input
+					type="text"
+					value={valueFromInput}
+					onChange={(event) => setValueFromInput(event.target.value.toLowerCase())}
+				/>
+				<button className="inputButton" onClick={() => checkForAnswer()}>
+					Check answer
+				</button>
+				<div className="feedback_container">
+					<p>{renderFeedback()}</p>
+				</div>
+			</React.Fragment>
+		);
+	};
+
+	return <div className="LettersGame">{groupOfLetters.length === 0 ? renderSelectGroupScreen() : renderGame()}</div>;
 };
 
 export default LettersGame;

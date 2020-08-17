@@ -14,6 +14,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.LettersGame .selectGroupScreen_title {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .LettersGame .selectLetterButton {
   padding: 5px;
   margin: 7px;
@@ -29,7 +34,7 @@
 }
 @media screen and (min-width: 500px) {
   .LettersGame .letter {
-    font-size: 400px;
+    font-size: 300px;
   }
 }
 .LettersGame .inputButton {
