@@ -5,7 +5,8 @@ const LettersGame = (props) => {
 	const lettersDayOne = props.letters.lettersDayOne;
 	const lettersDayTwo = props.letters.lettersDayTwo;
 	const lettersDayThree = props.letters.lettersDayThree;
-	const allLetters = [ ...lettersDayOne, ...lettersDayTwo, ...lettersDayThree ];
+	const lettersDayFour = props.letters.lettersDayFour;
+	const allLetters = [ ...lettersDayOne, ...lettersDayTwo, ...lettersDayThree, ...lettersDayFour ];
 
 	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
@@ -105,6 +106,9 @@ const LettersGame = (props) => {
 				</button>
 				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayThree)}>
 					Day 3
+				</button>
+				<button className="selectLetterButton" onClick={() => setGroupOfLetters(lettersDayFour)}>
+					Day 4
 				</button>
 			</React.Fragment>
 		);

@@ -5,6 +5,7 @@ import WordsGame from './components/WordsGame/WordsGame';
 import lettersDayOne from './json/letters/lettersDayOne.json';
 import lettersDayTwo from './json/letters/lettersDayTwo.json';
 import lettersDayThree from './json/letters/lettersDayThree.json';
+import lettersDayFour from './json/letters/lettersDayFour.json';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = () => {
@@ -21,7 +22,8 @@ const App = () => {
 								letters={{
 									lettersDayOne: lettersDayOne,
 									lettersDayTwo: lettersDayTwo,
-									lettersDayThree: lettersDayThree
+									lettersDayThree: lettersDayThree,
+									lettersDayFour: lettersDayFour
 								}}
 							/>
 						)}

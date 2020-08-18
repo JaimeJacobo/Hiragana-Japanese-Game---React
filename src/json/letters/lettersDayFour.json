@@ -1,0 +1,98 @@
+[
+	{
+		"hiragana_letter": "が",
+		"latin_letter": "ga"
+	},
+	{
+		"hiragana_letter": "ぎ",
+		"latin_letter": "gi"
+	},
+	{
+		"hiragana_letter": "ぐ",
+		"latin_letter": "gu"
+	},
+	{
+		"hiragana_letter": "げ",
+		"latin_letter": "ge"
+	},
+	{
+		"hiragana_letter": "ご",
+		"latin_letter": "go"
+	},
+	{
+		"hiragana_letter": "ざ",
+		"latin_letter": "za"
+	},
+	{
+		"hiragana_letter": "じ",
+		"latin_letter": "ji"
+	},
+	{
+		"hiragana_letter": "ず",
+		"latin_letter": "zu"
+	},
+	{
+		"hiragana_letter": "ぜ",
+		"latin_letter": "ze"
+	},
+	{
+		"hiragana_letter": "ぞ",
+		"latin_letter": "zo"
+	},
+	{
+		"hiragana_letter": "だ",
+		"latin_letter": "da"
+	},
+	{
+		"hiragana_letter": "ぢ",
+		"latin_letter": "di"
+	},
+	{
+		"hiragana_letter": "づ",
+		"latin_letter": "du"
+	},
+	{
+		"hiragana_letter": "で",
+		"latin_letter": "de"
+	},
+	{
+		"hiragana_letter": "ば",
+		"latin_letter": "ba"
+	},
+	{
+		"hiragana_letter": "び",
+		"latin_letter": "bi"
+	},
+	{
+		"hiragana_letter": "ぶ",
+		"latin_letter": "bu"
+	},
+	{
+		"hiragana_letter": "べ",
+		"latin_letter": "be"
+	},
+	{
+		"hiragana_letter": "ぼ",
+		"latin_letter": "bo"
+	},
+	{
+		"hiragana_letter": "ぱ",
+		"latin_letter": "pa"
+	},
+	{
+		"hiragana_letter": "ぴ",
+		"latin_letter": "pi"
+	},
+	{
+		"hiragana_letter": "ぷ",
+		"latin_letter": "pu"
+	},
+	{
+		"hiragana_letter": "ぺ",
+		"latin_letter": "pe"
+	},
+	{
+		"hiragana_letter": "ぽ",
+		"latin_letter": "po"
+	}
+]
