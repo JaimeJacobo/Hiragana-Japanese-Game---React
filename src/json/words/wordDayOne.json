@@ -1,38 +1,30 @@
 [
 	{
-		"japanese_word_latin": "kon'nichiwa",
-		"latin_word": [ "hola", "hello" ]
-	},
-	{
-		"japanese_word_latin": "hai",
-		"latin_word": [ "si", "yes" ]
-	},
-	{
 		"japanese_word_latin": "ichi",
-		"latin_word": [ "uno", "one", "1" ]
+		"latin_word": [ "one", "uno" ]
 	},
 	{
-		"japanese_word_latin": "aoi",
-		"latin_word": [ "azul", "blue" ]
+		"japanese_word_latin": "ni",
+		"latin_word": [ "two", "dos" ]
 	},
 	{
-		"japanese_word_latin": "aka",
-		"latin_word": [ "rojo", "red" ]
+		"japanese_word_latin": "san",
+		"latin_word": [ "three", "tres" ]
 	},
 	{
 		"japanese_word_latin": "yon",
-		"latin_word": [ "cuatro", "four", "4" ]
-	},
-	{
-		"japanese_word_latin": "shiroi",
-		"latin_word": [ "blanco", "white" ]
+		"latin_word": [ "four", "cuatro" ]
 	},
 	{
 		"japanese_word_latin": "roku",
-		"latin_word": [ "seis", "six", "6" ]
+		"latin_word": [ "six", "seis" ]
 	},
 	{
 		"japanese_word_latin": "nana",
-		"latin_word": [ "siete", "seven", "7" ]
-	}
+		"latin_word": [ "seven", "siete" ]
+	},
+	{
+		"japanese_word_latin": "hai",
+		"latin_word": [ "yes", "si" ]
+	},
 ]
