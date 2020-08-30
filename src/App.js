@@ -15,6 +15,7 @@ import hiragana_g_letters from './json/hiragana/letters/g-letters.json';
 import hiragana_z_letters from './json/hiragana/letters/z-letters.json';
 import hiragana_d_letters from './json/hiragana/letters/d-letters.json';
 import hiragana_b_letters from './json/hiragana/letters/b-letters.json';
+import hiragana_p_letters from './json/hiragana/letters/p-letters.json';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = () => {
@@ -42,7 +43,8 @@ const App = () => {
 									hiragana_g_letters: hiragana_g_letters,
 									hiragana_z_letters: hiragana_z_letters,
 									hiragana_d_letters: hiragana_d_letters,
-									hiragana_b_letters: hiragana_b_letters
+									hiragana_b_letters: hiragana_b_letters,
+									hiragana_p_letters: hiragana_p_letters
 								}}
 							/>
 						)}

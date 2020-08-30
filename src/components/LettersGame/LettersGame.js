@@ -17,7 +17,8 @@ const LettersGame = (props) => {
 	const hiragana_z_letters = props.letters.hiragana_z_letters
 	const hiragana_d_letters = props.letters.hiragana_d_letters
 	const hiragana_b_letters = props.letters.hiragana_b_letters
-	const allLetters = [ ...hiragana_constant_letters, ...hiragana_h_letters, ...hiragana_k_letters, ...hiragana_m_letters, ...hiragana_n_letters, ...hiragana_r_letters, ...hiragana_s_letters, ...hiragana_t_letters, ...hiragana_w_letters, ...hiragana_y_letters, ...hiragana_g_letters, ...hiragana_z_letters, ...hiragana_d_letters, ...hiragana_b_letters];
+	const hiragana_p_letters = props.letters.hiragana_p_letters
+	const allLetters = [ ...hiragana_constant_letters, ...hiragana_h_letters, ...hiragana_k_letters, ...hiragana_m_letters, ...hiragana_n_letters, ...hiragana_r_letters, ...hiragana_s_letters, ...hiragana_t_letters, ...hiragana_w_letters, ...hiragana_y_letters, ...hiragana_g_letters, ...hiragana_z_letters, ...hiragana_d_letters, ...hiragana_b_letters, ...hiragana_p_letters];
 
 	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
@@ -108,7 +109,7 @@ const LettersGame = (props) => {
 				<h2 className="selectGroupScreen_title">Select the group of letters you want to play with</h2>
 				<div className="selectLetter_div">
 					<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
-						All letters
+						ALL LETTERS
 					</button>
 					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_k_letters)}>
 						K-letters
@@ -148,6 +149,9 @@ const LettersGame = (props) => {
 					</button>
 					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_b_letters)}>
 						B-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_p_letters)}>
+						P-letters
 					</button>
 					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_constant_letters)}>
 						Constant letters
