@@ -1,5 +1,5 @@
 import React from 'react';
-import './Wordsgame.min.css'
+import './Wordsgame.scss'
 
 const WordsGame = () => {
 	return (

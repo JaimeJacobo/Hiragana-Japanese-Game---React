@@ -1,50 +1,57 @@
 .LettersGame {
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-	.selectGroupScreen_title {
-		text-align: center;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+  .selectGroupScreen_title {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-	.selectLetterButton {
-		padding: 5px;
-		margin: 7px;
-	}
+  .selectLetter_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+  }
 
-	.streak {
-		margin-bottom: 0;
-		margin-top: 20px;
-		font-size: 25px;
-	}
+  .selectLetterButton {
+    padding: 5px;
+    margin: 7px;
+  }
 
-	.letter {
-		font-family: sans-serif;
-		font-size: 80vw;
-		@media screen and (min-width: 500px) {
-			font-size: 300px;
-		}
-	}
+  .streak {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 25px;
+  }
 
-	.inputButton {
-		padding: 5px;
-		background-color: rgb(80, 195, 76);
-		border-radius: 5px;
-		margin-top: 10px;
-	}
+  .letter {
+    font-family: sans-serif;
+    font-size: 80vw;
+    @media screen and (min-width: 500px) {
+      font-size: 300px;
+    }
+  }
 
-	.feedback_container {
-		border: 1px solid black;
-		border-radius: 5px;
-		padding: 10px;
-		width: 130px;
-		p {
-			margin: 0;
-			text-align: center;
-		}
-	}
+  .inputButton {
+    padding: 5px;
+    background-color: rgb(80, 195, 76);
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .feedback_container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
 }

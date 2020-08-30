@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LettersGame.min.css';
+import './LettersGame.scss';
 
 const LettersGame = (props) => {
 
@@ -13,7 +13,11 @@ const LettersGame = (props) => {
 	const hiragana_t_letters = props.letters.hiragana_t_letters
 	const hiragana_w_letters = props.letters.hiragana_w_letters
 	const hiragana_y_letters = props.letters.hiragana_y_letters
-	const allLetters = [ ...hiragana_constant_letters, ...hiragana_h_letters, ...hiragana_k_letters, ...hiragana_m_letters, ...hiragana_n_letters, ...hiragana_r_letters, ...hiragana_s_letters, ...hiragana_t_letters, ...hiragana_w_letters, ...hiragana_y_letters];
+	const hiragana_g_letters = props.letters.hiragana_g_letters
+	const hiragana_z_letters = props.letters.hiragana_z_letters
+	const hiragana_d_letters = props.letters.hiragana_d_letters
+	const hiragana_b_letters = props.letters.hiragana_b_letters
+	const allLetters = [ ...hiragana_constant_letters, ...hiragana_h_letters, ...hiragana_k_letters, ...hiragana_m_letters, ...hiragana_n_letters, ...hiragana_r_letters, ...hiragana_s_letters, ...hiragana_t_letters, ...hiragana_w_letters, ...hiragana_y_letters, ...hiragana_g_letters, ...hiragana_z_letters, ...hiragana_d_letters, ...hiragana_b_letters];
 
 	let previousAnswer = {};
 	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
@@ -102,39 +106,53 @@ const LettersGame = (props) => {
 		return (
 			<React.Fragment>
 				<h2 className="selectGroupScreen_title">Select the group of letters you want to play with</h2>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
-					All letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_k_letters)}>
-					K-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_s_letters)}>
-					S-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_t_letters)}>
-					T-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_n_letters)}>
-					N-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_h_letters)}>
-					H-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_m_letters)}>
-					M-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_y_letters)}>
-					Y-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_r_letters)}>
-					R-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_w_letters)}>
-					W-letters
-				</button>
-				<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_constant_letters)}>
-					Constant letters
-				</button>
+				<div className="selectLetter_div">
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
+						All letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_k_letters)}>
+						K-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_s_letters)}>
+						S-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_t_letters)}>
+						T-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_n_letters)}>
+						N-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_h_letters)}>
+						H-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_m_letters)}>
+						M-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_y_letters)}>
+						Y-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_r_letters)}>
+						R-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_w_letters)}>
+						W-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_g_letters)}>
+						G-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_z_letters)}>
+						Z-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_d_letters)}>
+						D-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_b_letters)}>
+						B-letters
+					</button>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_constant_letters)}>
+						Constant letters
+					</button>
+				</div>
 			</React.Fragment>
 		);
 	};
@@ -160,7 +178,6 @@ const LettersGame = (props) => {
 			</React.Fragment>
 		);
 	};
-	console.log(hiragana_k_letters)
 	return <div className="LettersGame">{groupOfLetters.length === 0 ? renderSelectGroupScreen() : renderGame()}</div>;
 };
 
