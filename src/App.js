@@ -1,11 +1,16 @@
 import React from 'react';
 import Home from './components/Home/Home';
 import LettersGame from './components/LettersGame/LettersGame';
-import WordsGame from './components/WordsGame/WordsGame';
-import lettersDayOne from './json/letters/lettersDayOne.json';
-import lettersDayTwo from './json/letters/lettersDayTwo.json';
-import lettersDayThree from './json/letters/lettersDayThree.json';
-import lettersDayFour from './json/letters/lettersDayFour.json';
+import hiragana_constant_letters from './json/hiragana/letters/constants.json';
+import hiragana_h_letters from './json/hiragana/letters/h-letters.json';
+import hiragana_k_letters from './json/hiragana/letters/k-letters.json';
+import hiragana_m_letters from './json/hiragana/letters/m-letters.json';
+import hiragana_n_letters from './json/hiragana/letters/n-letters.json';
+import hiragana_r_letters from './json/hiragana/letters/r-letters.json';
+import hiragana_s_letters from './json/hiragana/letters/s-letters.json';
+import hiragana_t_letters from './json/hiragana/letters/t-letters.json';
+import hiragana_w_letters from './json/hiragana/letters/w-letters.json';
+import hiragana_y_letters from './json/hiragana/letters/y-letters.json';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = () => {
@@ -16,19 +21,25 @@ const App = () => {
 					<Route path="/" exact component={() => <Home />} />
 					<Route
 						exact
-						path="/letters"
+						path="/hiragana/letters"
 						component={() => (
 							<LettersGame
 								letters={{
-									lettersDayOne: lettersDayOne,
-									lettersDayTwo: lettersDayTwo,
-									lettersDayThree: lettersDayThree,
-									lettersDayFour: lettersDayFour
+									hiragana_constant_letters: hiragana_constant_letters,
+									hiragana_h_letters: hiragana_h_letters,
+									hiragana_k_letters: hiragana_k_letters,
+									hiragana_m_letters: hiragana_m_letters,
+									hiragana_n_letters: hiragana_n_letters,
+									hiragana_r_letters: hiragana_r_letters,
+									hiragana_s_letters: hiragana_s_letters,
+									hiragana_t_letters: hiragana_t_letters,
+									hiragana_w_letters: hiragana_w_letters,
+									hiragana_y_letters: hiragana_y_letters
 								}}
 							/>
 						)}
 					/>
-					<Route exact path="/words" component={() => <WordsGame />} />
+					{/* <Route exact path="/hiragana/letters" component={() => <lettersGame />} /> */}
 				</div>
 			</Router>
 		</div>

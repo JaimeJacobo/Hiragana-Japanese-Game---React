@@ -7,10 +7,17 @@ const Home = () => {
 		<div className="Home">
 			<h1>Hiragana Game</h1>
 			<div className="link">
-				<Link to="/letters">Play letters game</Link>
+				<Link to="/hiragana/letters">Play with letters</Link>
 			</div>
 			<div className="link">
-				<Link to="/words">Play words game (soon)</Link>
+				<Link to="/hiragana/words">Play with words (soon)</Link>
+			</div>
+			<h1>Katakana Game</h1>
+			<div className="link">
+				<Link to="/letters">Play with letters</Link>
+			</div>
+			<div className="link">
+				<Link to="/words">Play with words (soon)</Link>
 			</div>
 		</div>
 	);
