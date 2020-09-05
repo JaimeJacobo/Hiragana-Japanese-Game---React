@@ -19,7 +19,7 @@ const LettersGame = (props) => {
 	const b_letters = props.letters.b_letters
 	const p_letters = props.letters.p_letters
 	// const allLetters = [ ...constant_letters, ...h_letters, ...k_letters, ...m_letters, ...n_letters, ...r_letters, ...s_letters, ...t_letters, ...w_letters, ...y_letters, ...g_letters, ...z_letters, ...d_letters, ...b_letters, ...p_letters];
-	const allLetters = [...constant_letters, ...k_letters, ...s_letters, ...t_letters];
+	const allLetters = [...constant_letters, ...k_letters, ...s_letters, ...t_letters, ...n_letters];
 
 	let previousAnswer = {};
 	const [correctAnswerObject, setCorrectAnswerObject] = useState({ letter: ':)' });
