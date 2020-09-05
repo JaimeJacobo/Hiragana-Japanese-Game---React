@@ -1,26 +1,26 @@
 [
 	{
-		"letter": "ん",
+		"letter": "ン",
 		"latin_letter": "n"
 	},
 	{
-		"letter": "あ",
+		"letter": "ア",
 		"latin_letter": "a"
 	},
 	{
-		"letter": "い",
+		"letter": "イ",
 		"latin_letter": "i"
 	},
 	{
-		"letter": "う",
+		"letter": "ウ",
 		"latin_letter": "u"
 	},
 	{
-		"letter": "え",
+		"letter": "エ",
 		"latin_letter": "e"
 	},
 	{
-		"letter": "お",
+		"letter": "オ",
 		"latin_letter": "o"
 	}
 ]

@@ -1,23 +1,27 @@
 [
 	{
-		"letter": "た",
+		"letter": "タ",
 		"latin_letter": "ta"
 	},
 	{
-		"letter": "ち",
+		"letter": "チ",
 		"latin_letter": "chi"
 	},
 	{
-		"letter": "つ",
+		"letter": "ツ",
 		"latin_letter": "tsu"
 	},
 	{
-		"letter": "て",
+		"letter": "テ",
 		"latin_letter": "te"
 	},
 	{
-		"letter": "と",
+		"letter": "ト",
 		"latin_letter": "to"
 	}
 ]
+
+
+
+
 

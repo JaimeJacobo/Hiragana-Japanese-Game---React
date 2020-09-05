@@ -1,22 +1,22 @@
 [
 	{
-		"hiragana_letter": "か",
+		"letter": "か",
 		"latin_letter": "ka"
 	},
 	{
-		"hiragana_letter": "き",
+		"letter": "き",
 		"latin_letter": "ki"
 	},
 	{
-		"hiragana_letter": "く",
+		"letter": "く",
 		"latin_letter": "ku"
 	},
 	{
-		"hiragana_letter": "け",
+		"letter": "け",
 		"latin_letter": "ke"
 	},
 	{
-		"hiragana_letter": "こ",
+		"letter": "こ",
 		"latin_letter": "ko"
 	}
 ]

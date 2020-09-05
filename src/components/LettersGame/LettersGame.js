@@ -3,33 +3,34 @@ import './LettersGame.scss';
 
 const LettersGame = (props) => {
 
-	const hiragana_constant_letters = props.letters.hiragana_constant_letters
-	const hiragana_h_letters = props.letters.hiragana_h_letters
-	const hiragana_k_letters = props.letters.hiragana_k_letters
-	const hiragana_m_letters = props.letters.hiragana_m_letters
-	const hiragana_n_letters = props.letters.hiragana_n_letters
-	const hiragana_r_letters = props.letters.hiragana_r_letters
-	const hiragana_s_letters = props.letters.hiragana_s_letters
-	const hiragana_t_letters = props.letters.hiragana_t_letters
-	const hiragana_w_letters = props.letters.hiragana_w_letters
-	const hiragana_y_letters = props.letters.hiragana_y_letters
-	const hiragana_g_letters = props.letters.hiragana_g_letters
-	const hiragana_z_letters = props.letters.hiragana_z_letters
-	const hiragana_d_letters = props.letters.hiragana_d_letters
-	const hiragana_b_letters = props.letters.hiragana_b_letters
-	const hiragana_p_letters = props.letters.hiragana_p_letters
-	const allLetters = [ ...hiragana_constant_letters, ...hiragana_h_letters, ...hiragana_k_letters, ...hiragana_m_letters, ...hiragana_n_letters, ...hiragana_r_letters, ...hiragana_s_letters, ...hiragana_t_letters, ...hiragana_w_letters, ...hiragana_y_letters, ...hiragana_g_letters, ...hiragana_z_letters, ...hiragana_d_letters, ...hiragana_b_letters, ...hiragana_p_letters];
+	const constant_letters = props.letters.constant_letters
+	const h_letters = props.letters.h_letters
+	const k_letters = props.letters.k_letters
+	const m_letters = props.letters.m_letters
+	const n_letters = props.letters.n_letters
+	const r_letters = props.letters.r_letters
+	const s_letters = props.letters.s_letters
+	const t_letters = props.letters.t_letters
+	const w_letters = props.letters.w_letters
+	const y_letters = props.letters.y_letters
+	const g_letters = props.letters.g_letters
+	const z_letters = props.letters.z_letters
+	const d_letters = props.letters.d_letters
+	const b_letters = props.letters.b_letters
+	const p_letters = props.letters.p_letters
+	// const allLetters = [ ...constant_letters, ...h_letters, ...k_letters, ...m_letters, ...n_letters, ...r_letters, ...s_letters, ...t_letters, ...w_letters, ...y_letters, ...g_letters, ...z_letters, ...d_letters, ...b_letters, ...p_letters];
+	const allLetters = [...constant_letters, ...k_letters, ...s_letters, ...t_letters];
 
 	let previousAnswer = {};
-	const [ correctAnswerObject, setCorrectAnswerObject ] = useState({ hiragana_letter: ':)' });
+	const [correctAnswerObject, setCorrectAnswerObject] = useState({ letter: ':)' });
 
-	const [ valueFromInput, setValueFromInput ] = useState('');
-	const [ feedbackAnswer, setFeedbackAnswer ] = useState('');
-	const [ groupOfLetters, setGroupOfLetters ] = useState([]);
-	const [ streak, setStreak ] = useState(0);
+	const [valueFromInput, setValueFromInput] = useState('');
+	const [feedbackAnswer, setFeedbackAnswer] = useState('');
+	const [groupOfLetters, setGroupOfLetters] = useState([]);
+	const [streak, setStreak] = useState(0);
 
 	const changePreviousAnswer = () => {
-		previousAnswer = correctAnswerObject.hiragana_letter;
+		previousAnswer = correctAnswerObject.letter;
 	};
 
 	const getRandomIndex = () => {
@@ -46,7 +47,7 @@ const LettersGame = (props) => {
 	const getRandomLetter = () => {
 		changePreviousAnswer();
 		const randomIndex = getRandomIndex();
-		if (checkForSamePreviousAnswer(groupOfLetters[randomIndex].hiragana_letter)) {
+		if (checkForSamePreviousAnswer(groupOfLetters[randomIndex].letter)) {
 			getRandomLetter();
 		} else {
 			setCorrectAnswerObject(groupOfLetters[randomIndex]);
@@ -55,11 +56,11 @@ const LettersGame = (props) => {
 	};
 
 	const renderRandomLetter = () => {
-		if (correctAnswerObject.hiragana_letter === ':)') {
+		if (correctAnswerObject.letter === ':)') {
 			renderFirstQuestion();
 		}
 
-		return correctAnswerObject.hiragana_letter;
+		return correctAnswerObject.letter;
 	};
 
 	const clearInputs = () => {
@@ -111,49 +112,49 @@ const LettersGame = (props) => {
 					<button className="selectLetterButton" onClick={() => setGroupOfLetters(allLetters)}>
 						ALL LETTERS
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_k_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(k_letters)}>
 						K-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_s_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(s_letters)}>
 						S-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_t_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(t_letters)}>
 						T-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_n_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(n_letters)}>
 						N-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_h_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(h_letters)}>
 						H-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_m_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(m_letters)}>
 						M-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_y_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(y_letters)}>
 						Y-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_r_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(r_letters)}>
 						R-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_w_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(w_letters)}>
 						W-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_g_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(g_letters)}>
 						G-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_z_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(z_letters)}>
 						Z-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_d_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(d_letters)}>
 						D-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_b_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(b_letters)}>
 						B-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_p_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(p_letters)}>
 						P-letters
 					</button>
-					<button className="selectLetterButton" onClick={() => setGroupOfLetters(hiragana_constant_letters)}>
+					<button className="selectLetterButton" onClick={() => setGroupOfLetters(constant_letters)}>
 						Constant letters
 					</button>
 				</div>
