@@ -1,22 +1,24 @@
 [
   {
-    "letter": "だ",
+    "letter": "ダ",
     "latin_letter": "da"
   },
   {
-    "letter": "ぢ",
-    "latin_letter": "di"
+    "letter": "ヂ",
+    "latin_letter": "dji"
   },
   {
-    "letter": "づ",
-    "latin_letter": "du"
+    "letter": "ヅ",
+    "latin_letter": "dzu"
   },
   {
-    "letter": "で",
+    "letter": "デ",
     "latin_letter": "de"
   },
   {
-    "letter": "ど",
+    "letter": "ド",
     "latin_letter": "do"
   }
 ]
+
+
