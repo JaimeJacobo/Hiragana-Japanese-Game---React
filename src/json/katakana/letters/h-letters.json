@@ -1,22 +1,24 @@
 [
 	{
-		"letter": "は",
+		"letter": "ハ",
 		"latin_letter": "ha"
 	},
 	{
-		"letter": "ひ",
+		"letter": "ヒ",
 		"latin_letter": "hi"
 	},
 	{
-		"letter": "ふ",
+		"letter": "フ",
 		"latin_letter": "fu"
 	},
 	{
-		"letter": "へ",
+		"letter": "ヘ",
 		"latin_letter": "he"
 	},
 	{
-		"letter": "ほ",
+		"letter": "ホ",
 		"latin_letter": "ho"
 	}
 ]
+
+
