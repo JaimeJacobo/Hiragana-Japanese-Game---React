@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import "./LettersGame.scss";
+import React, { useState } from 'react'
+import './LettersGame.scss'
 
 const LettersGame = (props) => {
-  const constant_letters = props.letters.constant_letters;
-  const h_letters = props.letters.h_letters;
-  const k_letters = props.letters.k_letters;
-  const m_letters = props.letters.m_letters;
-  const n_letters = props.letters.n_letters;
-  const r_letters = props.letters.r_letters;
-  const s_letters = props.letters.s_letters;
-  const t_letters = props.letters.t_letters;
-  const w_letters = props.letters.w_letters;
-  const y_letters = props.letters.y_letters;
-  const g_letters = props.letters.g_letters;
-  const z_letters = props.letters.z_letters;
-  const d_letters = props.letters.d_letters;
-  const b_letters = props.letters.b_letters;
-  const p_letters = props.letters.p_letters;
+  const constant_letters = props.letters.constant_letters
+  const h_letters = props.letters.h_letters
+  const k_letters = props.letters.k_letters
+  const m_letters = props.letters.m_letters
+  const n_letters = props.letters.n_letters
+  const r_letters = props.letters.r_letters
+  const s_letters = props.letters.s_letters
+  const t_letters = props.letters.t_letters
+  const w_letters = props.letters.w_letters
+  const y_letters = props.letters.y_letters
+  const g_letters = props.letters.g_letters
+  const z_letters = props.letters.z_letters
+  const d_letters = props.letters.d_letters
+  const b_letters = props.letters.b_letters
+  const p_letters = props.letters.p_letters
   const allLetters = [
     ...constant_letters,
     ...h_letters,
@@ -32,95 +32,140 @@ const LettersGame = (props) => {
     ...z_letters,
     ...d_letters,
     ...b_letters,
-    ...p_letters,
-  ];
+    ...p_letters
+  ]
 
-  let previousAnswer = {};
+  let previousAnswer = {}
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
-    letter: ":)",
-  });
+    letter: ':)'
+  })
 
-  const [valueFromInput, setValueFromInput] = useState("");
-  const [feedbackAnswer, setFeedbackAnswer] = useState("");
-  const [groupOfLetters, setGroupOfLetters] = useState([]);
-  const [streak, setStreak] = useState(0);
+  const [valueFromInput, setValueFromInput] = useState('')
+  const [feedbackAnswer, setFeedbackAnswer] = useState('')
+  const [groupOfLetters, setGroupOfLetters] = useState([])
+  const [selectedLetters, setSelectedLetters] = useState([])
+  const [selectedLettersNames, setSelectedLettersNames] = useState([])
+
+  const [streak, setStreak] = useState(0)
 
   const changePreviousAnswer = () => {
-    previousAnswer = correctAnswerObject.letter;
-  };
+    previousAnswer = correctAnswerObject.letter
+  }
 
   const getRandomIndex = () => {
-    return Math.floor(Math.random() * groupOfLetters.length);
-  };
+    return Math.floor(Math.random() * groupOfLetters.length)
+  }
 
   const checkForSamePreviousAnswer = (hiraganaLetter) => {
     if (hiraganaLetter === previousAnswer) {
-      return true;
+      return true
     }
-    return false;
-  };
+    return false
+  }
 
   const getRandomLetter = () => {
-    changePreviousAnswer();
-    const randomIndex = getRandomIndex();
+    changePreviousAnswer()
+    const randomIndex = getRandomIndex()
     if (checkForSamePreviousAnswer(groupOfLetters[randomIndex].letter)) {
-      getRandomLetter();
+      getRandomLetter()
     } else {
-      setCorrectAnswerObject(groupOfLetters[randomIndex]);
-      renderRandomLetter();
+      setCorrectAnswerObject(groupOfLetters[randomIndex])
+      renderRandomLetter()
     }
-  };
+  }
 
   const renderRandomLetter = () => {
-    if (correctAnswerObject.letter === ":)") {
-      renderFirstQuestion();
+    if (correctAnswerObject.letter === ':)') {
+      renderFirstQuestion()
     }
 
-    return correctAnswerObject.letter;
-  };
+    return correctAnswerObject.letter
+  }
 
   const clearInputs = () => {
-    setValueFromInput("");
-    setFeedbackAnswer("");
-  };
+    setValueFromInput('')
+    setFeedbackAnswer('')
+  }
 
   const nextQuestion = () => {
     setTimeout(() => {
-      getRandomLetter();
-      clearInputs();
-    }, 1000);
-  };
+      getRandomLetter()
+      clearInputs()
+    }, 1000)
+  }
 
   const renderFirstQuestion = () => {
-    setCorrectAnswerObject(groupOfLetters[getRandomIndex()]);
-  };
+    setCorrectAnswerObject(groupOfLetters[getRandomIndex()])
+  }
 
   const updateStreak = (reset) => {
-    reset ? setStreak(0) : setStreak(streak + 1);
-  };
+    reset ? setStreak(0) : setStreak(streak + 1)
+  }
 
   const getFeedbackMessage = (answer) => {
     if (answer) {
-      setFeedbackAnswer("Correcto!");
-      updateStreak();
+      setFeedbackAnswer('Correcto!')
+      updateStreak()
     } else {
-      setFeedbackAnswer("Incorrecto :(");
-      updateStreak("reset");
+      setFeedbackAnswer('Incorrecto :(')
+      updateStreak('reset')
     }
-  };
+  }
 
   const checkForAnswer = () => {
-    const inputAnswer = valueFromInput;
-    const correctAnswer = correctAnswerObject.latin_letter;
+    const inputAnswer = valueFromInput
+    const correctAnswer = correctAnswerObject.latin_letter
     inputAnswer === correctAnswer
       ? getFeedbackMessage(true)
-      : getFeedbackMessage();
-    nextQuestion();
-  };
+      : getFeedbackMessage()
+    nextQuestion()
+  }
 
   const renderFeedback = () => {
-    return feedbackAnswer;
-  };
+    return feedbackAnswer
+  }
+
+  const convertToReadableName = (name) => {
+    if (name.includes('_')) {
+      let newName = name.split('_')
+      newName[0] = newName[0].toUpperCase()
+      newName = newName.join(' ')
+      return newName
+    }
+    return name
+  }
+
+  const updateStates = (name) => {
+    const copyOfSelectedLettersNames = [...selectedLettersNames]
+
+    if (!copyOfSelectedLettersNames.includes(convertToReadableName(name))) {
+      setSelectedLettersNames([
+        ...selectedLettersNames,
+        convertToReadableName(name)
+      ])
+
+      const selectedGroup = {
+        constant_letters,
+        h_letters,
+        k_letters,
+        m_letters,
+        n_letters,
+        r_letters,
+        s_letters,
+        t_letters,
+        w_letters,
+        y_letters,
+        g_letters,
+        z_letters,
+        d_letters,
+        b_letters,
+        p_letters,
+        allLetters
+      }[name]
+
+      setSelectedLetters([...selectedGroup, ...selectedLetters])
+    }
+  }
 
   const renderSelectGroupScreen = () => {
     return (
@@ -131,104 +176,113 @@ const LettersGame = (props) => {
         <div className="selectLetter_div">
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(allLetters)}
+            onClick={() => updateStates('allLetters')}
           >
             ALL LETTERS
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(k_letters)}
+            onClick={() => updateStates('k_letters')}
           >
             K-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(s_letters)}
+            onClick={() => updateStates('s_letters')}
           >
             S-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(t_letters)}
+            onClick={() => updateStates('t_letters')}
           >
             T-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(n_letters)}
+            onClick={() => updateStates('n_letters')}
           >
             N-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(h_letters)}
+            onClick={() => updateStates('h_letters')}
           >
             H-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(m_letters)}
+            onClick={() => updateStates('m_letters')}
           >
             M-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(y_letters)}
+            onClick={() => updateStates('y_letters')}
           >
             Y-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(r_letters)}
+            onClick={() => updateStates('r_letters')}
           >
             R-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(w_letters)}
+            onClick={() => updateStates('w_letters')}
           >
             W-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(g_letters)}
+            onClick={() => updateStates('g_letters')}
           >
             G-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(z_letters)}
+            onClick={() => updateStates('z_letters')}
           >
             Z-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(d_letters)}
+            onClick={() => updateStates('d_letters')}
           >
             D-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(b_letters)}
+            onClick={() => updateStates('b_letters')}
           >
             B-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(p_letters)}
+            onClick={() => updateStates('p_letters')}
           >
             P-letters
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => setGroupOfLetters(constant_letters)}
+            onClick={() => updateStates('constant_letters')}
           >
             Constant letters
           </button>
         </div>
+        <div>
+          Selected letters:
+          {selectedLettersNames.map((group) => {
+            return <li>{group}</li>
+          })}
+        </div>
+        <button onClick={() => setGroupOfLetters([...selectedLetters])}>
+          PLAY!
+        </button>
       </React.Fragment>
-    );
-  };
+    )
+  }
 
   const renderGame = () => {
     return (
@@ -244,24 +298,21 @@ const LettersGame = (props) => {
             setValueFromInput(event.target.value.toLowerCase())
           }
         />
-        <button
-          className="inputButton"
-          onClick={() => checkForAnswer()}
-        >
+        <button className="inputButton" onClick={() => checkForAnswer()}>
           Check answer
         </button>
         <div className="feedback_container">
           <p>{renderFeedback()}</p>
         </div>
       </React.Fragment>
-    );
-  };
+    )
+  }
 
   return (
     <div className="LettersGame">
       {groupOfLetters.length === 0 ? renderSelectGroupScreen() : renderGame()}
     </div>
-  );
-};
+  )
+}
 
-export default LettersGame;
+export default LettersGame
