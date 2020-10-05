@@ -167,6 +167,11 @@ const LettersGame = (props) => {
     }
   }
 
+  const cleanStates = () => {
+    setSelectedLetters([])
+    setSelectedLettersNames([])
+  }
+
   const renderSelectGroupScreen = () => {
     return (
       <React.Fragment>
@@ -273,13 +278,14 @@ const LettersGame = (props) => {
         </div>
         <div>
           Selected letters:
-          {selectedLettersNames.map((group) => {
-            return <li>{group}</li>
-          })}
+          {selectedLettersNames.map((group) => (
+            <li key={Math.random().toString(36).substr(2, 3)}>{group}</li>
+          ))}
         </div>
         <button onClick={() => setGroupOfLetters([...selectedLetters])}>
           PLAY!
         </button>
+        <button onClick={() => cleanStates()}>CLEAN</button>
       </React.Fragment>
     )
   }
