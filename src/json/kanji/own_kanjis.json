@@ -133,8 +133,14 @@
   },
   {
     "letter": "魚",
-    "english_meaning": ["meat"],
+    "english_meaning": ["fish"],
     "kunyomi": ["さかな"],
     "onyomi": ["ギョ"]
+  },
+  {
+    "letter": "猫",
+    "english_meaning": ["meat"],
+    "kunyomi": ["ねこ"],
+    "onyomi": ["ビョウ"]
   }
 ]
