@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import './KanjisGame.scss'
 
 const LettersGame = (props) => {
+  const { kanjis_1_20, own_kanjis, kanjis_21_40 } = props.letters
 
-  const {kanjis_1_20, own_kanjis, kanjis_21_40} = props.letters
-
-  const allKanjis = [...kanjis_1_20, ...own_kanjis]
+  const allKanjis = [...kanjis_1_20, ...own_kanjis, ...kanjis_21_40]
 
   let previousAnswer = {}
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
