@@ -1,39 +1,11 @@
 import React, { useState } from 'react'
-import './LettersGame.scss'
+import './KanjisGame.scss'
 
 const LettersGame = (props) => {
-  const constant_letters = props.letters.constant_letters
-  const h_letters = props.letters.h_letters
-  const k_letters = props.letters.k_letters
-  const m_letters = props.letters.m_letters
-  const n_letters = props.letters.n_letters
-  const r_letters = props.letters.r_letters
-  const s_letters = props.letters.s_letters
-  const t_letters = props.letters.t_letters
-  const w_letters = props.letters.w_letters
-  const y_letters = props.letters.y_letters
-  const g_letters = props.letters.g_letters
-  const z_letters = props.letters.z_letters
-  const d_letters = props.letters.d_letters
-  const b_letters = props.letters.b_letters
-  const p_letters = props.letters.p_letters
-  const allLetters = [
-    ...constant_letters,
-    ...h_letters,
-    ...k_letters,
-    ...m_letters,
-    ...n_letters,
-    ...r_letters,
-    ...s_letters,
-    ...t_letters,
-    ...w_letters,
-    ...y_letters,
-    ...g_letters,
-    ...z_letters,
-    ...d_letters,
-    ...b_letters,
-    ...p_letters
-  ]
+  const top_20 = props.letters.top_20_kanjis
+  const own_kanjis = props.letters.own_kanjis
+
+  const allKanjis = [...top_20, ...own_kanjis]
 
   let previousAnswer = {}
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
@@ -114,8 +86,8 @@ const LettersGame = (props) => {
 
   const checkForAnswer = () => {
     const inputAnswer = valueFromInput
-    const correctAnswer = correctAnswerObject.latin_letter
-    inputAnswer === correctAnswer
+    const correctAnswerArray = correctAnswerObject.english_meaning
+    correctAnswerArray.includes(inputAnswer)
       ? getFeedbackMessage(true)
       : getFeedbackMessage()
     nextQuestion()
@@ -136,29 +108,19 @@ const LettersGame = (props) => {
   const updateStates = (name) => {
     const copyOfSelectedLettersNames = [...selectedLettersNames]
 
-    if (!copyOfSelectedLettersNames.includes(convertToReadableName(name))) {  //Esta condición sirve para evitar que puedas añadir dos veces el mismo grupo de letras
-      setSelectedLettersNames([  // Esta funcinalidad está para ver los nombres de las letras seleccionadas en pantalla
+    //Esta condición sirve para evitar que puedas añadir dos veces el mismo grupo de letras
+    if (!copyOfSelectedLettersNames.includes(convertToReadableName(name))) {
+      // Esta funcinalidad está para ver los nombres de las letras seleccionadas en pantalla
+      setSelectedLettersNames([
         ...selectedLettersNames,
         convertToReadableName(name)
       ])
 
-      const selectedGroup = {  //Selecciona el grupo correspondiente a partir del nombre
-        constant_letters,
-        h_letters,
-        k_letters,
-        m_letters,
-        n_letters,
-        r_letters,
-        s_letters,
-        t_letters,
-        w_letters,
-        y_letters,
-        g_letters,
-        z_letters,
-        d_letters,
-        b_letters,
-        p_letters,
-        allLetters
+      //Selecciona el grupo correspondiente a partir del nombre
+      const selectedGroup = {
+        top_20,
+        allKanjis,
+        own_kanjis
       }[name]
 
       setSelectedLetters([...selectedGroup, ...selectedLetters])
@@ -179,99 +141,21 @@ const LettersGame = (props) => {
         <div className="selectLetter_div">
           <button
             className="selectLetterButton"
-            onClick={() => updateStates('allLetters')}
+            onClick={() => updateStates('allKanjis')}
           >
-            ALL LETTERS
+            ALL KANJIS
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => updateStates('k_letters')}
+            onClick={() => updateStates('top_20')}
           >
-            K-letters
+            Top 20 Kanjis
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => updateStates('s_letters')}
+            onClick={() => updateStates('own_kanjis')}
           >
-            S-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('t_letters')}
-          >
-            T-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('n_letters')}
-          >
-            N-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('h_letters')}
-          >
-            H-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('m_letters')}
-          >
-            M-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('y_letters')}
-          >
-            Y-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('r_letters')}
-          >
-            R-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('w_letters')}
-          >
-            W-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('g_letters')}
-          >
-            G-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('z_letters')}
-          >
-            Z-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('d_letters')}
-          >
-            D-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('b_letters')}
-          >
-            B-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('p_letters')}
-          >
-            P-letters
-          </button>
-          <button
-            className="selectLetterButton"
-            onClick={() => updateStates('constant_letters')}
-          >
-            Constant letters
+            My own Kanjis
           </button>
         </div>
         <div>
@@ -281,8 +165,10 @@ const LettersGame = (props) => {
           ))}
         </div>
         <button onClick={() => setGroupOfLetters([...selectedLetters])}>
-          PLAY!
+          Play ENGLISH
         </button>
+        <button onClick={() => console.log('')}>Play KUNYOMI (SOON)</button>
+        <button onClick={() => console.log('')}>Play ONYOMI (SOON)</button>
         <button onClick={() => cleanStates()}>CLEAN</button>
       </React.Fragment>
     )
@@ -302,7 +188,11 @@ const LettersGame = (props) => {
             setValueFromInput(event.target.value.toLowerCase())
           }
         />
-        <button className="inputButton" onClick={() => checkForAnswer()}>
+        <button
+          id="submitAnswer"
+          className="inputButton"
+          onClick={() => checkForAnswer()}
+        >
           Check answer
         </button>
         <div className="feedback_container">

@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './components/Home/Home'
 import LettersGame from './components/LettersGame/LettersGame'
+import KanjisGame from './components/KanjisGame/KanjisGame'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //HIRAGANA
@@ -36,6 +37,10 @@ import katakana_z_letters from './json/katakana/letters/z-letters.json'
 import katakana_d_letters from './json/katakana/letters/d-letters.json'
 import katakana_b_letters from './json/katakana/letters/b-letters.json'
 import katakana_p_letters from './json/katakana/letters/p-letters.json'
+
+//KANJI
+import top_20_kanjis from './json/kanji/top_20.json'
+import own_kanjis from './json/kanji/own_kanjis.json'
 
 const App = () => {
   return (
@@ -89,6 +94,19 @@ const App = () => {
                   d_letters: katakana_d_letters,
                   b_letters: katakana_b_letters,
                   p_letters: katakana_p_letters
+                }}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/kanji"
+            component={() => (
+              <KanjisGame
+                kanji
+                letters={{
+                  top_20_kanjis: top_20_kanjis,
+                  own_kanjis: own_kanjis
                 }}
               />
             )}

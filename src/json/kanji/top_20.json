@@ -1,0 +1,129 @@
+[
+  {
+    "letter": "日",
+    "english_meaning": ["day", "sun", "Japan"],
+    "kunyomi": ["ひ"],
+    "onyomi": ["ニチ"]
+  },
+  {
+    "letter": "一",
+    "english_meaning": ["one"],
+    "kunyomi": ["ひと"],
+    "onyomi": ["イチ"]
+  },
+  {
+    "letter": "国",
+    "english_meaning": ["country"],
+    "kunyomi": ["くに"],
+    "onyomi": ["コク"]
+  },
+  {
+    "letter": "会",
+    "english_meaning": [
+      "meeting",
+      "meet",
+      "party",
+      "association",
+      "interview",
+      "join"
+    ],
+    "kunyomi": ["あう"],
+    "onyomi": ["カイ"]
+  },
+  {
+    "letter": "人",
+    "english_meaning": ["person"],
+    "kunyomi": ["ひと"],
+    "onyomi": ["ジン"]
+  },
+  {
+    "letter": "年",
+    "english_meaning": ["year"],
+    "kunyomi": ["とし"],
+    "onyomi": ["ネン"]
+  },
+  {
+    "letter": "大",
+    "english_meaning": ["large", "big"],
+    "kunyomi": ["おおきい"],
+    "onyomi": ["ダイ"]
+  },
+  {
+    "letter": "十",
+    "english_meaning": ["ten"],
+    "kunyomi": ["じゅう"],
+    "onyomi": ["ジュウ"]
+  },
+  {
+    "letter": "二",
+    "english_meaning": ["two"],
+    "kunyomi": ["に"],
+    "onyomi": ["ニ"]
+  },
+  {
+    "letter": "本",
+    "english_meaning": ["book"],
+    "kunyomi": ["ほん"],
+    "onyomi": ["ホン"]
+  },
+  {
+    "letter": "中",
+    "english_meaning": ["inside", "in", "middle", "mean", "center"],
+    "kunyomi": ["なか"],
+    "onyomi": ["チュウ"]
+  },
+  {
+    "letter": "長",
+    "english_meaning": ["long", "prolonged"],
+    "kunyomi": ["ながい"],
+    "onyomi": ["チョウ"]
+  },
+  {
+    "letter": "出",
+    "english_meaning": ["exit", "way out"],
+    "kunyomi": ["でる"],
+    "onyomi": ["シュツ"]
+  },
+  {
+    "letter": "三",
+    "english_meaning": ["three"],
+    "kunyomi": ["さん"],
+    "onyomi": ["サン"]
+  },
+  {
+    "letter": "同",
+    "english_meaning": ["same", "equal"],
+    "kunyomi": ["おなじ"],
+    "onyomi": ["ドウ"]
+  },
+  {
+    "letter": "時",
+    "english_meaning": ["time", "hour"],
+    "kunyomi": ["とき"],
+    "onyomi": ["ジ"]
+  },
+  {
+    "letter": "政",
+    "english_meaning": ["politics", "government"],
+    "kunyomi": ["まつりごと"],
+    "onyomi": ["マツリゴト"]
+  },
+  {
+    "letter": "事",
+    "english_meaning": ["situation"],
+    "kunyomi": ["こと"],
+    "onyomi": ["ジ"]
+  },
+  {
+    "letter": "自",
+    "english_meaning": ["oneself", "own", "self"],
+    "kunyomi": ["みずから"],
+    "onyomi": ["ジ"]
+  },
+  {
+    "letter": "行",
+    "english_meaning": ["going", "to go", "to move"],
+    "kunyomi": ["いく"],
+    "onyomi": ["コウ"]
+  }
+]

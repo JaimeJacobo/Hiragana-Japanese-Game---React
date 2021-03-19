@@ -1,0 +1,122 @@
+[
+  {
+    "letter": "水",
+    "english_meaning": ["water"],
+    "kunyomi": ["みず"],
+    "onyomi": ["スイ"]
+  },
+  {
+    "letter": "火",
+    "english_meaning": ["fire"],
+    "kunyomi": ["ひ"],
+    "onyomi": ["カ"]
+  },
+  {
+    "letter": "卵",
+    "english_meaning": ["egg", "eggs"],
+    "kunyomi": ["たまご"],
+    "onyomi": ["ラン"]
+  },
+  {
+    "letter": "犬 ",
+    "english_meaning": ["dog"],
+    "kunyomi": ["いぬ"],
+    "onyomi": []
+  },
+  {
+    "letter": "君",
+    "english_meaning": ["you"],
+    "kunyomi": ["きみ"],
+    "onyomi": ["クン"]
+  },
+  {
+    "letter": "名",
+    "english_meaning": ["name"],
+    "kunyomi": ["な"],
+    "onyomi": ["メイ"]
+  },
+  {
+    "letter": "目",
+    "english_meaning": ["eye", "eyeball", "look"],
+    "kunyomi": ["め"],
+    "onyomi": ["モク"]
+  },
+  {
+    "letter": "東",
+    "english_meaning": ["east"],
+    "kunyomi": ["ひがし"],
+    "onyomi": ["トウ"]
+  },
+  {
+    "letter": "京",
+    "english_meaning": ["capital"],
+    "kunyomi": [],
+    "onyomi": ["キョウ"]
+  },
+  {
+    "letter": "私",
+    "english_meaning": ["me", "I"],
+    "kunyomi": ["わたくし"],
+    "onyomi": ["シ"]
+  },
+  {
+    "letter": "化",
+    "english_meaning": ["change", "take the form of"],
+    "kunyomi": ["ばける"],
+    "onyomi": ["カ"]
+  },
+  {
+    "letter": "肺",
+    "english_meaning": ["lung", "lungs"],
+    "kunyomi": [],
+    "onyomi": ["ハイ"]
+  },
+  {
+    "letter": "女",
+    "english_meaning": ["woman", "female"],
+    "kunyomi": ["おんな"],
+    "onyomi": ["ジョ"]
+  },
+  {
+    "letter": "子",
+    "english_meaning": ["child"],
+    "kunyomi": ["こ"],
+    "onyomi": ["シ"]
+  },
+  {
+    "letter": "学",
+    "english_meaning": ["study", "learning", "learn"],
+    "kunyomi": ["まなぶ"],
+    "onyomi": ["ガク"]
+  },
+  {
+    "letter": "生",
+    "english_meaning": ["life", "genuine", "birth"],
+    "kunyomi": ["いきる"],
+    "onyomi": ["セイ"]
+  },
+  {
+    "letter": "北",
+    "english_meaning": ["north"],
+    "kunyomi": ["きた"],
+    "onyomi": ["ホクイ"]
+  },
+  {
+    "letter": "西",
+    "english_meaning": ["west"],
+    "kunyomi": ["にし"],
+    "onyomi": ["セイ"]
+  },
+  {
+    "letter": "南",
+    "english_meaning": ["south"],
+    "kunyomi": ["みなみ"],
+    "onyomi": ["ナン"]
+  },
+  {
+    "letter": "死",
+    "english_meaning": ["death", "die"],
+    "kunyomi": ["しぬ"],
+    "onyomi": ["シ"]
+  }
+]
