@@ -55,7 +55,7 @@
   },
   {
     "letter": "私",
-    "english_meaning": ["me", "I"],
+    "english_meaning": ["me", "i"],
     "kunyomi": ["わたくし"],
     "onyomi": ["シ"]
   },
@@ -79,7 +79,7 @@
   },
   {
     "letter": "子",
-    "english_meaning": ["child"],
+    "english_meaning": ["child", "kid"],
     "kunyomi": ["こ"],
     "onyomi": ["シ"]
   },
@@ -118,5 +118,23 @@
     "english_meaning": ["death", "die"],
     "kunyomi": ["しぬ"],
     "onyomi": ["シ"]
+  },
+  {
+    "letter": "語",
+    "english_meaning": ["language"],
+    "kunyomi": [],
+    "onyomi": ["ゴ"]
+  },
+  {
+    "letter": "肉",
+    "english_meaning": ["meat"],
+    "kunyomi": ["にく"],
+    "onyomi": ["ニク"]
+  },
+  {
+    "letter": "魚",
+    "english_meaning": ["meat"],
+    "kunyomi": ["さかな"],
+    "onyomi": ["ギョ"]
   }
 ]
