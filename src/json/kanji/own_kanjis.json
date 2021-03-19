@@ -42,12 +42,6 @@
     "onyomi": ["モク"]
   },
   {
-    "letter": "東",
-    "english_meaning": ["east"],
-    "kunyomi": ["ひがし"],
-    "onyomi": ["トウ"]
-  },
-  {
     "letter": "京",
     "english_meaning": ["capital"],
     "kunyomi": [],
@@ -88,12 +82,6 @@
     "english_meaning": ["study", "learning", "learn"],
     "kunyomi": ["まなぶ"],
     "onyomi": ["ガク"]
-  },
-  {
-    "letter": "生",
-    "english_meaning": ["life", "genuine", "birth"],
-    "kunyomi": ["いきる"],
-    "onyomi": ["セイ"]
   },
   {
     "letter": "北",

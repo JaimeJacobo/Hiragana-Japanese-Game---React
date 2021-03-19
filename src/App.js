@@ -39,7 +39,8 @@ import katakana_b_letters from './json/katakana/letters/b-letters.json'
 import katakana_p_letters from './json/katakana/letters/p-letters.json'
 
 //KANJI
-import top_20_kanjis from './json/kanji/top_20.json'
+import kanjis_1_20 from './json/kanji/kanjis_1_20.json'
+import kanjis_21_40 from './json/kanji/kanjis_21_40.json'
 import own_kanjis from './json/kanji/own_kanjis.json'
 
 const App = () => {
@@ -105,8 +106,9 @@ const App = () => {
               <KanjisGame
                 kanji
                 letters={{
-                  top_20_kanjis: top_20_kanjis,
-                  own_kanjis: own_kanjis
+                  kanjis_1_20: kanjis_1_20,
+                  own_kanjis: own_kanjis,
+                  kanjis_21_40
                 }}
               />
             )}

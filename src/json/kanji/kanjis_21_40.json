@@ -1,0 +1,177 @@
+[
+  {
+    "letter": "社",
+    "english_meaning": ["company", "firm", "office", "association"],
+    "kunyomi": ["やしろ"],
+    "onyomi": ["シャ"]
+  },
+  {
+    "letter": "見",
+    "english_meaning": [
+      "see",
+      "to see",
+      "look",
+      "to look",
+      "watch",
+      "to watch",
+      "view",
+      "to view",
+      "to examine",
+      "to look over"
+    ],
+    "kunyomi": ["みる"],
+    "onyomi": ["ケン"]
+  },
+  {
+    "letter": "月",
+    "english_meaning": ["month", "moon"],
+    "kunyomi": ["つき"],
+    "onyomi": ["ゲツ"]
+  },
+  {
+    "letter": "分",
+    "english_meaning": [
+      "part",
+      "segment",
+      "to divide",
+      "to split",
+      "to separate",
+      "to part"
+    ],
+    "kunyomi": ["わける"],
+    "onyomi": ["ブン"]
+  },
+  {
+    "letter": "議",
+    "english_meaning": [
+      "deliberation",
+      "consulation",
+      "debate",
+      "consideration",
+      "discussion"
+    ],
+    "kunyomi": [],
+    "onyomi": ["ギ"]
+  },
+  {
+    "letter": "後",
+    "english_meaning": ["behind", "afterwards", "back", "later"],
+    "kunyomi": ["のち"],
+    "onyomi": ["ゴ"]
+  },
+  {
+    "letter": "前",
+    "english_meaning": [
+      "in front",
+      "before",
+      "ago",
+      "previously",
+      "prior",
+      "previous"
+    ],
+    "kunyomi": ["まえ"],
+    "onyomi": ["ゼン"]
+  },
+  {
+    "letter": "民",
+    "english_meaning": ["people", "nation", "citizens", "citizen", "resident"],
+    "kunyomi": ["たみ"],
+    "onyomi": ["ミン"]
+  },
+  {
+    "letter": "生",
+    "english_meaning": ["life", "genuine", "birth"],
+    "kunyomi": ["いきる"],
+    "onyomi": ["セイ"]
+  },
+  {
+    "letter": "連",
+    "english_meaning": [
+      "enrol",
+      "to enrol",
+      "be part of",
+      "to be part of",
+      "extend",
+      "to extend",
+      "stretch out",
+      "to stretch out",
+      "attend",
+      "to attend",
+      "participate in",
+      "to participate in",
+      "take along",
+      "to take along"
+    ],
+    "kunyomi": ["つらなる"],
+    "onyomi": ["レン"]
+  },
+  {
+    "letter": "五",
+    "english_meaning": ["five"],
+    "kunyomi": ["いつ"],
+    "onyomi": ["ゴ"]
+  },
+  {
+    "letter": "発",
+    "english_meaning": ["depart", "to depart", "departure"],
+    "kunyomi": [],
+    "onyomi": ["ハツ"]
+  },
+  {
+    "letter": "間",
+    "english_meaning": [
+      "while",
+      "interval",
+      "space between",
+      "gap",
+      "time between",
+      "period of time",
+      "between",
+      "among"
+    ],
+    "kunyomi": ["あいだ"],
+    "onyomi": ["カン"]
+  },
+  {
+    "letter": "対",
+    "english_meaning": ["versus", "vs"],
+    "kunyomi": ["あいて"],
+    "onyomi": ["タイ"]
+  },
+  {
+    "letter": "上",
+    "english_meaning": ["above", "up"],
+    "kunyomi": ["うえ"],
+    "onyomi": ["ジョウ"]
+  },
+  {
+    "letter": "部",
+    "english_meaning": ["department", "section"],
+    "kunyomi": [],
+    "onyomi": ["ブ"]
+  },
+  {
+    "letter": "東",
+    "english_meaning": ["east"],
+    "kunyomi": ["ひがし"],
+    "onyomi": ["トウ"]
+  },
+  {
+    "letter": "者",
+    "english_meaning": ["someone", "person"],
+    "kunyomi": ["もの"],
+    "onyomi": ["シャ"]
+  },
+  {
+    "letter": "党",
+    "english_meaning": ["party", "political party"],
+    "kunyomi": ["なかま"],
+    "onyomi": ["トウ"]
+  },
+  {
+    "letter": "地",
+    "english_meaning": ["ground", "earth", "land"],
+    "kunyomi": [],
+    "onyomi": ["チ"]
+  }
+]

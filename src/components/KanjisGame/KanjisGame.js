@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import './KanjisGame.scss'
 
 const LettersGame = (props) => {
-  const top_20 = props.letters.top_20_kanjis
-  const own_kanjis = props.letters.own_kanjis
 
-  const allKanjis = [...top_20, ...own_kanjis]
+  const {kanjis_1_20, own_kanjis, kanjis_21_40} = props.letters
+
+  const allKanjis = [...kanjis_1_20, ...own_kanjis]
 
   let previousAnswer = {}
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
@@ -118,9 +118,10 @@ const LettersGame = (props) => {
 
       //Selecciona el grupo correspondiente a partir del nombre
       const selectedGroup = {
-        top_20,
+        kanjis_1_20,
         allKanjis,
-        own_kanjis
+        own_kanjis,
+        kanjis_21_40
       }[name]
 
       setSelectedLetters([...selectedGroup, ...selectedLetters])
@@ -147,9 +148,15 @@ const LettersGame = (props) => {
           </button>
           <button
             className="selectLetterButton"
-            onClick={() => updateStates('top_20')}
+            onClick={() => updateStates('kanjis_1_20')}
           >
-            Top 20 Kanjis
+            1-20 Most Used
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('kanjis_21_40')}
+          >
+            21-40 Most Used
           </button>
           <button
             className="selectLetterButton"
