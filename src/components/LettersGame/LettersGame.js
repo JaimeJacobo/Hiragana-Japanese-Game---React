@@ -16,8 +16,6 @@ const LettersGame = (props) => {
           ...props.letters.kanjis_21_40
         ]
       })
-      // const { kanjis_1_20, own_kanjis, kanjis_21_40 } = props.letters
-      // const allKanjis = [...kanjis_1_20, ...own_kanjis, ...kanjis_21_40]
     } else {
       setGameVariables({
         constant_letters: props.letters.constant_letters,
@@ -57,17 +55,21 @@ const LettersGame = (props) => {
   }, [])
 
   let previousAnswer = {}
+
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
     letter: ':)'
   })
-
   const [valueFromInput, setValueFromInput] = useState('')
   const [feedbackAnswer, setFeedbackAnswer] = useState('')
   const [groupOfLetters, setGroupOfLetters] = useState([])
   const [selectedLetters, setSelectedLetters] = useState([])
   const [selectedLettersNames, setSelectedLettersNames] = useState([])
-
   const [streak, setStreak] = useState(0)
+
+  useEffect(() => {
+    const inputAnswer = document.getElementById('inputAnswer')
+    if (inputAnswer) inputAnswer.focus()
+  }, [correctAnswerObject])
 
   const changePreviousAnswer = () => {
     previousAnswer = correctAnswerObject.letter
@@ -330,7 +332,6 @@ const LettersGame = (props) => {
   }
 
   const renderKanjiSelectGroupScreen = () => {
-    console.log('gusi')
     return (
       <React.Fragment>
         <h2 className="selectGroupScreen_title">
@@ -386,6 +387,8 @@ const LettersGame = (props) => {
         </div>
         <div className="letter">{renderRandomLetter()}</div>
         <input
+          autoFocus
+          id="inputAnswer"
           type="text"
           value={valueFromInput}
           onChange={(event) =>

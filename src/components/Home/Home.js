@@ -21,7 +21,7 @@ const Home = () => {
       </div>
       <h2>Kanjis Game</h2>
       <div className="link">
-        <Link to="/kanji">Play with letters</Link>
+        <Link to="/kanji">Play with Kanjis</Link>
       </div>
       <div className="link">
         <Link to="/words">Play with words (soon)</Link>
