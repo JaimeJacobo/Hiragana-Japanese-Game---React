@@ -1,0 +1,180 @@
+[
+  {
+    "letter": "合",
+    "english_meaning": [
+      "fit",
+      "to fit",
+      "come together",
+      "to come together",
+      "merge",
+      "to merge",
+      "unite",
+      "to unite",
+      "match",
+      "to match",
+      "agree",
+      "to agree with",
+      "to agree"
+    ],
+    "kunyomi": ["あう"],
+    "onyomi": ["ゴウ"]
+  },
+  {
+    "letter": "市",
+    "english_meaning": ["city"],
+    "kunyomi": ["いち"],
+    "onyomi": ["シ"]
+  },
+  {
+    "letter": "業",
+    "english_meaning": ["business", "deed", "act"],
+    "kunyomi": ["わざ"],
+    "onyomi": ["ギョウ"]
+  },
+  {
+    "letter": "内",
+    "english_meaning": ["within", "between", "among", "inside"],
+    "kunyomi": ["うち"],
+    "onyomi": ["ナイ"]
+  },
+  {
+    "letter": "相",
+    "english_meaning": ["phase"],
+    "kunyomi": [""],
+    "onyomi": ["ソウ"]
+  },
+  {
+    "letter": "方",
+    "english_meaning": ["direction", "way"],
+    "kunyomi": ["かた"],
+    "onyomi": ["ホウ"]
+  },
+  {
+    "letter": "四",
+    "english_meaning": ["four"],
+    "kunyomi": ["よん"],
+    "onyomi": ["シ"]
+  },
+  {
+    "letter": "定",
+    "english_meaning": [
+      "to establish",
+      "establish",
+      "established",
+      "determine"
+    ],
+    "kunyomi": ["さだめる"],
+    "onyomi": ["テイ"]
+  },
+  {
+    "letter": "今",
+    "english_meaning": ["now"],
+    "kunyomi": ["いま"],
+    "onyomi": ["コン"]
+  },
+  {
+    "letter": "回",
+    "english_meaning": [
+      "times",
+      "several times",
+      "to rotate",
+      "rotate",
+      "spin",
+      "in circles"
+    ],
+    "kunyomi": [],
+    "onyomi": ["カイ"]
+  },
+  {
+    "letter": "新",
+    "english_meaning": ["new"],
+    "kunyomi": ["あたら.しい"],
+    "onyomi": ["シン"]
+  },
+  {
+    "letter": "場",
+    "english_meaning": ["location", "place"],
+    "kunyomi": ["ば"],
+    "onyomi": ["ジョウ"]
+  },
+  {
+    "letter": "金",
+    "english_meaning": ["gold", "money"],
+    "kunyomi": ["かね"],
+    "onyomi": ["キン"]
+  },
+  {
+    "letter": "員",
+    "english_meaning": ["member", "employee"],
+    "kunyomi": [],
+    "onyomi": ["イン"]
+  },
+  {
+    "letter": "九",
+    "english_meaning": ["nine"],
+    "kunyomi": ["ここの"],
+    "onyomi": ["キュウ"]
+  },
+  {
+    "letter": "入",
+    "english_meaning": [
+      "enter",
+      "to enter",
+      "get in",
+      "to get in",
+      "insert",
+      "to insert"
+    ],
+    "kunyomi": ["いる"],
+    "onyomi": ["ニュウ"]
+  },
+  {
+    "letter": "選",
+    "english_meaning": [
+      "to choose",
+      "choose",
+      "choice",
+      "to select",
+      "select",
+      "elect",
+      "to elect",
+      "selection"
+    ],
+    "kunyomi": ["えらぶ"],
+    "onyomi": ["セン"]
+  },
+  {
+    "letter": "立",
+    "english_meaning": [
+      "to stand",
+      "stand",
+      "to stand up",
+      "stand up",
+      "erect",
+      "to erect",
+      "rise",
+      "to rise"
+    ],
+    "kunyomi": ["たつ"],
+    "onyomi": ["リツ"]
+  },
+  {
+    "letter": "開",
+    "english_meaning": [
+      "open",
+      "to open",
+      "unfold",
+      "to unfold",
+      "unseal",
+      "to unseal"
+    ],
+    "kunyomi": ["ひらく"],
+    "onyomi": ["カイ"]
+  },
+  {
+    "letter": "手",
+    "english_meaning": ["hand"],
+    "kunyomi": ["て"],
+    "onyomi": ["シュ"]
+  }
+]
