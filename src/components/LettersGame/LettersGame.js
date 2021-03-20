@@ -1,39 +1,60 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './LettersGame.scss'
 
 const LettersGame = (props) => {
-  const constant_letters = props.letters.constant_letters
-  const h_letters = props.letters.h_letters
-  const k_letters = props.letters.k_letters
-  const m_letters = props.letters.m_letters
-  const n_letters = props.letters.n_letters
-  const r_letters = props.letters.r_letters
-  const s_letters = props.letters.s_letters
-  const t_letters = props.letters.t_letters
-  const w_letters = props.letters.w_letters
-  const y_letters = props.letters.y_letters
-  const g_letters = props.letters.g_letters
-  const z_letters = props.letters.z_letters
-  const d_letters = props.letters.d_letters
-  const b_letters = props.letters.b_letters
-  const p_letters = props.letters.p_letters
-  const allLetters = [
-    ...constant_letters,
-    ...h_letters,
-    ...k_letters,
-    ...m_letters,
-    ...n_letters,
-    ...r_letters,
-    ...s_letters,
-    ...t_letters,
-    ...w_letters,
-    ...y_letters,
-    ...g_letters,
-    ...z_letters,
-    ...d_letters,
-    ...b_letters,
-    ...p_letters
-  ]
+  const [gameVariables, setGameVariables] = useState({})
+
+  useEffect(() => {
+    if (props.kanji) {
+      setGameVariables({
+        own_kanjis: props.letters.own_kanjis,
+        kanjis_1_20: props.letters.kanjis_1_20,
+        kanjis_21_40: props.letters.kanjis_21_40,
+        allKanjis: [
+          ...props.letters.own_kanjis,
+          ...props.letters.kanjis_1_20,
+          ...props.letters.kanjis_21_40
+        ]
+      })
+      // const { kanjis_1_20, own_kanjis, kanjis_21_40 } = props.letters
+      // const allKanjis = [...kanjis_1_20, ...own_kanjis, ...kanjis_21_40]
+    } else {
+      setGameVariables({
+        constant_letters: props.letters.constant_letters,
+        h_letters: props.letters.h_letters,
+        k_letters: props.letters.k_letters,
+        m_letters: props.letters.m_letters,
+        n_letters: props.letters.n_letters,
+        r_letters: props.letters.r_letters,
+        s_letters: props.letters.s_letters,
+        t_letters: props.letters.t_letters,
+        w_letters: props.letters.w_letters,
+        y_letters: props.letters.y_letters,
+        g_letters: props.letters.g_letters,
+        z_letters: props.letters.z_letters,
+        d_letters: props.letters.d_letters,
+        b_letters: props.letters.b_letters,
+        p_letters: props.letters.p_letters,
+        allLetters: [
+          ...props.letters.constant_letters,
+          ...props.letters.h_letters,
+          ...props.letters.k_letters,
+          ...props.letters.m_letters,
+          ...props.letters.n_letters,
+          ...props.letters.r_letters,
+          ...props.letters.s_letters,
+          ...props.letters.t_letters,
+          ...props.letters.w_letters,
+          ...props.letters.y_letters,
+          ...props.letters.g_letters,
+          ...props.letters.z_letters,
+          ...props.letters.d_letters,
+          ...props.letters.b_letters,
+          ...props.letters.p_letters
+        ]
+      })
+    }
+  }, [])
 
   let previousAnswer = {}
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
@@ -113,12 +134,19 @@ const LettersGame = (props) => {
   }
 
   const checkForAnswer = () => {
-    const inputAnswer = valueFromInput
-    const correctAnswer = correctAnswerObject.latin_letter
-    inputAnswer === correctAnswer
-      ? getFeedbackMessage(true)
-      : getFeedbackMessage()
-    nextQuestion()
+    if (props.kanji) {
+      const correctAnswerArray = correctAnswerObject.english_meaning
+      correctAnswerArray.includes(valueFromInput)
+        ? getFeedbackMessage(true)
+        : getFeedbackMessage()
+      nextQuestion()
+    } else {
+      const correctAnswer = correctAnswerObject.latin_letter
+      valueFromInput === correctAnswer
+        ? getFeedbackMessage(true)
+        : getFeedbackMessage()
+      nextQuestion()
+    }
   }
 
   const renderFeedback = () => feedbackAnswer
@@ -136,30 +164,43 @@ const LettersGame = (props) => {
   const updateStates = (name) => {
     const copyOfSelectedLettersNames = [...selectedLettersNames]
 
-    if (!copyOfSelectedLettersNames.includes(convertToReadableName(name))) {  //Esta condición sirve para evitar que puedas añadir dos veces el mismo grupo de letras
-      setSelectedLettersNames([  // Esta funcinalidad está para ver los nombres de las letras seleccionadas en pantalla
+    if (!copyOfSelectedLettersNames.includes(convertToReadableName(name))) {
+      //Esta condición sirve para evitar que puedas añadir dos veces el mismo grupo de letras
+      setSelectedLettersNames([
+        // Esta funcinalidad está para ver los nombres de las letras seleccionadas en pantalla
         ...selectedLettersNames,
         convertToReadableName(name)
       ])
 
-      const selectedGroup = {  //Selecciona el grupo correspondiente a partir del nombre
-        constant_letters,
-        h_letters,
-        k_letters,
-        m_letters,
-        n_letters,
-        r_letters,
-        s_letters,
-        t_letters,
-        w_letters,
-        y_letters,
-        g_letters,
-        z_letters,
-        d_letters,
-        b_letters,
-        p_letters,
-        allLetters
-      }[name]
+      let selectedGroup = {}
+
+      if (props.kanji) {
+        selectedGroup = {
+          kanjis_1_20: gameVariables.kanjis_1_20,
+          allKanjis: gameVariables.allKanjis,
+          own_kanjis: gameVariables.own_kanjis,
+          kanjis_21_40: gameVariables.kanjis_1_20
+        }[name]
+      } else {
+        selectedGroup = {
+          constant_letters: gameVariables.constant_letters,
+          h_letters: gameVariables.h_letters,
+          k_letters: gameVariables.k_letters,
+          m_letters: gameVariables.m_letters,
+          n_letters: gameVariables.n_letters,
+          r_letters: gameVariables.r_letters,
+          s_letters: gameVariables.s_letters,
+          t_letters: gameVariables.t_letters,
+          w_letters: gameVariables.w_letters,
+          y_letters: gameVariables.y_letters,
+          g_letters: gameVariables.g_letters,
+          z_letters: gameVariables.z_letters,
+          d_letters: gameVariables.d_letters,
+          b_letters: gameVariables.b_letters,
+          p_letters: gameVariables.p_letters,
+          allLetters: gameVariables.allLetters
+        }[name]
+      }
 
       setSelectedLetters([...selectedGroup, ...selectedLetters])
     }
@@ -170,7 +211,7 @@ const LettersGame = (props) => {
     setSelectedLettersNames([])
   }
 
-  const renderSelectGroupScreen = () => {
+  const renderNonKanjiSelectGroupScreen = () => {
     return (
       <React.Fragment>
         <h2 className="selectGroupScreen_title">
@@ -288,6 +329,55 @@ const LettersGame = (props) => {
     )
   }
 
+  const renderKanjiSelectGroupScreen = () => {
+    console.log('gusi')
+    return (
+      <React.Fragment>
+        <h2 className="selectGroupScreen_title">
+          Select the group of letters you want to play with
+        </h2>
+        <div className="selectLetter_div">
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('allKanjis')}
+          >
+            ALL KANJIS
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('kanjis_1_20')}
+          >
+            1-20 Most Used
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('kanjis_21_40')}
+          >
+            21-40 Most Used
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('own_kanjis')}
+          >
+            My own Kanjis
+          </button>
+        </div>
+        <div>
+          Selected letters:
+          {selectedLettersNames.map((group) => (
+            <li key={Math.random().toString(36).substr(2, 3)}>{group}</li>
+          ))}
+        </div>
+        <button onClick={() => setGroupOfLetters([...selectedLetters])}>
+          Play ENGLISH
+        </button>
+        <button onClick={() => console.log('')}>Play KUNYOMI (SOON)</button>
+        <button onClick={() => console.log('')}>Play ONYOMI (SOON)</button>
+        <button onClick={() => cleanStates()}>CLEAN</button>
+      </React.Fragment>
+    )
+  }
+
   const renderGame = () => {
     return (
       <React.Fragment>
@@ -314,7 +404,11 @@ const LettersGame = (props) => {
 
   return (
     <div className="LettersGame">
-      {groupOfLetters.length === 0 ? renderSelectGroupScreen() : renderGame()}
+      {groupOfLetters.length === 0
+        ? props.kanji
+          ? renderKanjiSelectGroupScreen()
+          : renderNonKanjiSelectGroupScreen()
+        : renderGame()}
     </div>
   )
 }

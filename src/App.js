@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './components/Home/Home'
 import LettersGame from './components/LettersGame/LettersGame'
-import KanjisGame from './components/KanjisGame/KanjisGame'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //HIRAGANA
@@ -103,11 +102,11 @@ const App = () => {
             exact
             path="/kanji"
             component={() => (
-              <KanjisGame
+              <LettersGame
                 kanji
                 letters={{
-                  kanjis_1_20: kanjis_1_20,
-                  own_kanjis: own_kanjis,
+                  own_kanjis,
+                  kanjis_1_20,
                   kanjis_21_40
                 }}
               />
