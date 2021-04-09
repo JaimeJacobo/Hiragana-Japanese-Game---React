@@ -8,14 +8,18 @@ const LettersGame = (props) => {
     if (props.kanji) {
       setGameVariables({
         own_kanjis: props.letters.own_kanjis,
+        own_kanjis_2: props.letters.own_kanjis_2,
         kanjis_1_20: props.letters.kanjis_1_20,
         kanjis_21_40: props.letters.kanjis_21_40,
         kanjis_41_60: props.letters.kanjis_41_60,
+        kanjis_61_80: props.letters.kanjis_61_80,
         allKanjis: [
           ...props.letters.own_kanjis,
+          ...props.letters.own_kanjis_2,
           ...props.letters.kanjis_1_20,
           ...props.letters.kanjis_21_40,
-          ...props.letters.kanjis_41_60
+          ...props.letters.kanjis_41_60,
+          ...props.letters.kanjis_61_80
         ]
       })
     } else {
@@ -182,9 +186,11 @@ const LettersGame = (props) => {
         selectedGroup = {
           allKanjis: gameVariables.allKanjis,
           own_kanjis: gameVariables.own_kanjis,
+          own_kanjis_2: gameVariables.own_kanjis_2,
           kanjis_1_20: gameVariables.kanjis_1_20,
           kanjis_21_40: gameVariables.kanjis_21_40,
-          kanjis_41_60: gameVariables.kanjis_41_60
+          kanjis_41_60: gameVariables.kanjis_41_60,
+          kanjis_61_80: gameVariables.kanjis_61_80
         }[name]
       } else {
         selectedGroup = {
@@ -367,9 +373,21 @@ const LettersGame = (props) => {
           </button>
           <button
             className="selectLetterButton"
+            onClick={() => updateStates('kanjis_61_80')}
+          >
+            61-80 Most Used
+          </button>
+          <button
+            className="selectLetterButton"
             onClick={() => updateStates('own_kanjis')}
           >
             My own Kanjis
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('own_kanjis_2')}
+          >
+            My own Kanjis 2
           </button>
         </div>
         <div>

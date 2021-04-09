@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "左",
+    "english_meaning": ["left"],
+    "kunyomi": ["ひだり"],
+    "onyomi": ["サ"]
+  },
+  {
+    "letter": "右",
+    "english_meaning": ["right"],
+    "kunyomi": ["みぎ"],
+    "onyomi": ["ウ"]
+  },
+  {
+    "letter": "正",
+    "english_meaning": ["correct", "justice"],
+    "kunyomi": [],
+    "onyomi": ["セイ"]
+  },
+  {
+    "letter": "好",
+    "english_meaning": ["fond", "pleasing", "like"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "下",
+    "english_meaning": ["below", "down", "descend", "inferior"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "家",
+    "english_meaning": ["house", "home"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "世",
+    "english_meaning": ["society", "world"],
+    "kunyomi": ["め"],
+    "onyomi": ["モク"]
+  },
+  {
+    "letter": "習",
+    "english_meaning": ["learn", "to learn"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  }
+]

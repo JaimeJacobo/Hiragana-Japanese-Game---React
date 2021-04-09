@@ -1,0 +1,128 @@
+[
+  {
+    "letter": "米",
+    "english_meaning": ["rice", "USA"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "力",
+    "english_meaning": ["force", "strength", "strong"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "学",
+    "english_meaning": ["study", "learning", "to study", "science"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "問",
+    "english_meaning": ["question", "ask", "problem", "to ask", "to accuse of"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "高",
+    "english_meaning": ["expensive", "tall", "high"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "代",
+    "english_meaning": ["era", "age", "ages", "substitute", "replacement"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "明 ",
+    "english_meaning": ["bright", "light"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "実",
+    "english_meaning": ["reality", "truth", "honesty", "sincerity"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "円",
+    "english_meaning": ["yen"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "関",
+    "english_meaning": ["barrier", "gateway", "gate"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "決",
+    "english_meaning": ["decide", "agree", "to agree"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "子",
+    "english_meaning": ["child", "kid"],
+    "kunyomi": ["こ"],
+    "onyomi": ["シ"]
+  },
+  {
+    "letter": "動",
+    "english_meaning": ["movement", "to move", "move", "motion"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "京",
+    "english_meaning": ["capital"],
+    "kunyomi": [],
+    "onyomi": ["キョウ"]
+  },
+  {
+    "letter": "全",
+    "english_meaning": ["whole", "entire", "all", "complete", "fullfill"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "目",
+    "english_meaning": ["eye", "eyeball", "look"],
+    "kunyomi": ["め"],
+    "onyomi": ["モク"]
+  },
+  {
+    "letter": "表",
+    "english_meaning": ["visible part of", "visible part"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "戦",
+    "english_meaning": ["war", "battle", "match"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "経",
+    "english_meaning": [
+      "go through",
+      "to go through",
+      "to go by",
+      "go by",
+      "through"
+    ],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "通",
+    "english_meaning": ["traffic", "commute"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  }
+]

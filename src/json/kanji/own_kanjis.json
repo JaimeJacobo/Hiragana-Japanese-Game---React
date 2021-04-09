@@ -36,18 +36,6 @@
     "onyomi": ["メイ"]
   },
   {
-    "letter": "目",
-    "english_meaning": ["eye", "eyeball", "look"],
-    "kunyomi": ["め"],
-    "onyomi": ["モク"]
-  },
-  {
-    "letter": "京",
-    "english_meaning": ["capital"],
-    "kunyomi": [],
-    "onyomi": ["キョウ"]
-  },
-  {
     "letter": "私",
     "english_meaning": ["me", "i"],
     "kunyomi": ["わたくし"],
@@ -70,18 +58,6 @@
     "english_meaning": ["woman", "female"],
     "kunyomi": ["おんな"],
     "onyomi": ["ジョ"]
-  },
-  {
-    "letter": "子",
-    "english_meaning": ["child", "kid"],
-    "kunyomi": ["こ"],
-    "onyomi": ["シ"]
-  },
-  {
-    "letter": "学",
-    "english_meaning": ["study", "learning", "learn"],
-    "kunyomi": ["まなぶ"],
-    "onyomi": ["ガク"]
   },
   {
     "letter": "北",

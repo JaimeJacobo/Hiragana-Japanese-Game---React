@@ -41,7 +41,9 @@ import katakana_p_letters from './json/katakana/letters/p-letters.json'
 import kanjis_1_20 from './json/kanji/kanjis_1_20.json'
 import kanjis_21_40 from './json/kanji/kanjis_21_40.json'
 import kanjis_41_60 from './json/kanji/kanjis_41_60.json'
+import kanjis_61_80 from './json/kanji/kanjis_61_80.json'
 import own_kanjis from './json/kanji/own_kanjis.json'
+import own_kanjis_2 from './json/kanji/own_kanjis_2.json'
 
 const App = () => {
   return (
@@ -107,14 +109,20 @@ const App = () => {
                 kanji
                 letters={{
                   own_kanjis,
+                  own_kanjis_2,
                   kanjis_1_20,
                   kanjis_21_40,
-                  kanjis_41_60
+                  kanjis_41_60,
+                  kanjis_61_80
                 }}
               />
             )}
           />
-          {/* <Route exact path="/hiragana/letters" component={() => <lettersGame />} /> */}
+          <Route
+            exact
+            path="/hiragana/words"
+            component={() => <LettersGame />}
+          />
         </div>
       </Router>
     </div>
