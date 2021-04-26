@@ -222,6 +222,13 @@ const LettersGame = (props) => {
     setSelectedLettersNames([])
   }
 
+  const handleKeypress = (e) => {
+    console.log(e.keyCode)
+    if (e.keyCode === 13) {
+      checkForAnswer()
+    }
+  }
+
   const renderNonKanjiSelectGroupScreen = () => {
     return (
       <React.Fragment>
@@ -406,6 +413,11 @@ const LettersGame = (props) => {
     )
   }
 
+  const prueba = (event)=>{
+    console.log(event)
+    setValueFromInput(event.target.value.toLowerCase())
+  }
+
   const renderGame = () => {
     return (
       <React.Fragment>
@@ -419,8 +431,9 @@ const LettersGame = (props) => {
           type="text"
           value={valueFromInput}
           onChange={(event) =>
-            setValueFromInput(event.target.value.toLowerCase())
+            prueba(event)
           }
+          onKeyPress={handleKeypress}
         />
         <button className="inputButton" onClick={() => checkForAnswer()}>
           Check answer

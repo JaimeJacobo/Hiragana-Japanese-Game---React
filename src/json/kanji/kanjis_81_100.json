@@ -1,37 +1,37 @@
 [
   {
-    "letter": "米",
-    "english_meaning": ["rice", "USA"],
+    "letter": "外",
+    "english_meaning": ["outside"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "力",
-    "english_meaning": ["force", "strength", "strong"],
+    "letter": "最",
+    "english_meaning": ["most", "the most", "utmost", "extreme", "the extreme"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "学",
-    "english_meaning": ["study", "learning", "to study", "science"],
+    "letter": "言",
+    "english_meaning": ["word", "say", "to say"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "問",
-    "english_meaning": ["question", "ask", "problem", "to ask", "to accuse of"],
+    "letter": "氏",
+    "english_meaning": ["family name"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "高",
-    "english_meaning": ["expensive", "tall", "high"],
+    "letter": "現",
+    "english_meaning": ["present", "existing", "actual"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "代",
-    "english_meaning": ["era", "age", "ages", "substitute", "replacement"],
+    "letter": "理",
+    "english_meaning": ["logic"],
     "kunyomi": [],
     "onyomi": []
   },
