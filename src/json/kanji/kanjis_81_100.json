@@ -36,26 +36,31 @@
     "onyomi": []
   },
   {
-    "letter": "明 ",
-    "english_meaning": ["bright", "light"],
+    "letter": "調",
+    "english_meaning": ["pitch", "tone", "tempo", "tune"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "実",
-    "english_meaning": ["reality", "truth", "honesty", "sincerity"],
+    "letter": "体",
+    "english_meaning": ["body"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "円",
-    "english_meaning": ["yen"],
+    "letter": "化",
+    "english_meaning": [
+      "change",
+      "to change",
+      "take the form of",
+      "to take the form of"
+    ],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "関",
-    "english_meaning": ["barrier", "gateway", "gate"],
+    "letter": "田",
+    "english_meaning": ["rice field"],
     "kunyomi": [],
     "onyomi": []
   },
