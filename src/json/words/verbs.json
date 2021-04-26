@@ -1,0 +1,98 @@
+[
+  {
+    "letter": "たべます",
+    "english_meaning": ["to eat", "eat"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "のみます",
+    "english_meaning": ["to drink", "drink"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "します",
+    "english_meaning": ["to do", "do"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "みます",
+    "english_meaning": ["to see", "see"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "かきます",
+    "english_meaning": ["to draw", "draw", "write", "to write"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "よみます",
+    "english_meaning": ["to read", "read"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "ききます",
+    "english_meaning": ["to hear", "hear", "to listen", "listen"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "いきます",
+    "english_meaning": ["to go", "go"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "ねます",
+    "english_meaning": ["to sleep", "sleep"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "あります",
+    "english_meaning": ["to have", "have"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "おきます",
+    "english_meaning": ["to wake up", "wake up"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "きます",
+    "english_meaning": ["to come", "come"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "かえります",
+    "english_meaning": ["to return (natal)", "return (natal)"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "うんどうをします",
+    "english_meaning": ["to excercise", "excercise"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "テレビをみます",
+    "english_meaning": ["to watch TV", "watch TV"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  },
+  {
+    "letter": "ききます",
+    "english_meaning": ["to hear", "hear"],
+    "kunyomi": [""],
+    "onyomi": [""]
+  }
+]

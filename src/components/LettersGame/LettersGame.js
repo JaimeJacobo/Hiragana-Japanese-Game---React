@@ -52,6 +52,11 @@ const LettersGame = (props) => {
           ...kanjis_81_100
         ]
       })
+    } else if (props.words) {
+      setGameVariables({
+        verbs: props.letters.verbs,
+        allWords: [...props.letters.verbs]
+      })
     } else {
       setGameVariables({
         constant_letters: constant_letters,
@@ -184,13 +189,17 @@ const LettersGame = (props) => {
       setFeedbackAnswer('Correcto!')
       updateStreak()
     } else {
-      setFeedbackAnswer('ERROR! Correct answer: ' + renderCorrectAnswer())
+      if (props.kanji || props.words) {
+        setFeedbackAnswer('ERROR! Correct answer: ' + renderCorrectAnswer())
+      } else {
+        setFeedbackAnswer('ERROR!')
+      }
       updateStreak('reset')
     }
   }
 
   const checkForAnswer = () => {
-    if (props.kanji) {
+    if (props.kanji || props.words) {
       const correctAnswerArray = correctAnswerObject.english_meaning
       correctAnswerArray.includes(valueFromInput)
         ? getFeedbackMessages(true)
@@ -241,6 +250,11 @@ const LettersGame = (props) => {
           kanjis_61_80: gameVariables.kanjis_61_80,
           kanjis_81_100: gameVariables.kanjis_81_100
         }[name]
+      } else if (props.words) {
+        selectedGroup = {
+          allWords: gameVariables.allWords,
+          verbs: gameVariables.verbs
+        }[name]
       } else {
         selectedGroup = {
           constant_letters: gameVariables.constant_letters,
@@ -271,13 +285,7 @@ const LettersGame = (props) => {
     setSelectedLettersNames([])
   }
 
-  const handleKeypress = (e) => {
-    if (e.keyCode === 13) {
-      checkForAnswer()
-    }
-  }
-
-  const renderNonKanjiSelectGroupScreen = () => {
+  const renderLetterSelectGroupScreen = () => {
     return (
       <React.Fragment>
         <h2 className="selectGroupScreen_title">
@@ -467,8 +475,55 @@ const LettersGame = (props) => {
     )
   }
 
-  const prueba = (event) => {
-    setValueFromInput(event.target.value.toLowerCase())
+  const renderWordsSelectGroupScreen = () => {
+    return (
+      <React.Fragment>
+        <h2 className="selectGroupScreen_title">
+          Select the group of words you want to play with
+        </h2>
+        <div className="selectLetter_div">
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('verbs')}
+          >
+            Verbs
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('allWords')}
+          >
+            ALL WORDS
+          </button>
+        </div>
+        <div>
+          Selected letters:
+          {selectedLettersNames.map((group) => (
+            <li key={Math.random().toString(36).substr(2, 3)}>{group}</li>
+          ))}
+        </div>
+        <button onClick={() => setGroupOfLetters([...selectedLetters])}>
+          Play ENGLISH to JAPANESE
+        </button>
+        <button onClick={() => setGroupOfLetters([...selectedLetters])}>
+          Play JAPANESE to ENGLISH
+        </button>
+        <button onClick={() => cleanStates()}>CLEAN</button>
+      </React.Fragment>
+    )
+  }
+
+  const selectRenderPage = () => {
+    if (groupOfLetters.length === 0) {
+      if (props.kanji) {
+        return renderKanjiSelectGroupScreen()
+      } else if (props.words) {
+        return renderWordsSelectGroupScreen()
+      } else {
+        return renderLetterSelectGroupScreen()
+      }
+    } else {
+      return renderGame()
+    }
   }
 
   const renderGame = () => {
@@ -483,8 +538,9 @@ const LettersGame = (props) => {
           id="inputAnswer"
           type="text"
           value={valueFromInput}
-          onChange={(event) => prueba(event)}
-          onKeyPress={handleKeypress}
+          onChange={(event) =>
+            setValueFromInput(event.target.value.toLowerCase())
+          }
         />
         <button
           id="inputButton"
@@ -500,15 +556,7 @@ const LettersGame = (props) => {
     )
   }
 
-  return (
-    <div className="LettersGame">
-      {groupOfLetters.length === 0
-        ? props.kanji
-          ? renderKanjiSelectGroupScreen()
-          : renderNonKanjiSelectGroupScreen()
-        : renderGame()}
-    </div>
-  )
+  return <div className="LettersGame">{selectRenderPage()}</div>
 }
 
 export default LettersGame
