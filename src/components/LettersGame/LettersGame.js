@@ -4,57 +4,87 @@ import './LettersGame.scss'
 const LettersGame = (props) => {
   const [gameVariables, setGameVariables] = useState({})
 
+  const {
+    constant_letters,
+    h_letters,
+    k_letters,
+    m_letters,
+    n_letters,
+    r_letters,
+    s_letters,
+    t_letters,
+    w_letters,
+    y_letters,
+    g_letters,
+    z_letters,
+    d_letters,
+    b_letters,
+    p_letters
+  } = props.letters
+
+  const {
+    own_kanjis,
+    own_kanjis_2,
+    kanjis_1_20,
+    kanjis_21_40,
+    kanjis_41_60,
+    kanjis_61_80,
+    kanjis_81_100
+  } = props.letters
+
   useEffect(() => {
     if (props.kanji) {
       setGameVariables({
-        own_kanjis: props.letters.own_kanjis,
-        own_kanjis_2: props.letters.own_kanjis_2,
-        kanjis_1_20: props.letters.kanjis_1_20,
-        kanjis_21_40: props.letters.kanjis_21_40,
-        kanjis_41_60: props.letters.kanjis_41_60,
-        kanjis_61_80: props.letters.kanjis_61_80,
+        own_kanjis,
+        own_kanjis_2,
+        kanjis_1_20,
+        kanjis_21_40,
+        kanjis_41_60,
+        kanjis_61_80,
+        kanjis_81_100,
         allKanjis: [
-          ...props.letters.own_kanjis,
-          ...props.letters.own_kanjis_2,
-          ...props.letters.kanjis_1_20,
-          ...props.letters.kanjis_21_40,
-          ...props.letters.kanjis_41_60,
-          ...props.letters.kanjis_61_80
+          ...own_kanjis,
+          ...own_kanjis_2,
+          ...kanjis_1_20,
+          ...kanjis_21_40,
+          ...kanjis_41_60,
+          ...kanjis_61_80,
+          ...kanjis_81_100
         ]
       })
     } else {
       setGameVariables({
-        constant_letters: props.letters.constant_letters,
-        h_letters: props.letters.h_letters,
-        k_letters: props.letters.k_letters,
-        m_letters: props.letters.m_letters,
-        n_letters: props.letters.n_letters,
-        r_letters: props.letters.r_letters,
-        s_letters: props.letters.s_letters,
-        t_letters: props.letters.t_letters,
-        w_letters: props.letters.w_letters,
-        y_letters: props.letters.y_letters,
-        g_letters: props.letters.g_letters,
-        z_letters: props.letters.z_letters,
-        d_letters: props.letters.d_letters,
-        b_letters: props.letters.b_letters,
-        p_letters: props.letters.p_letters,
+        constant_letters: constant_letters,
+        h_letters,
+        k_letters,
+        m_letters,
+        n_letters,
+        r_letters,
+        s_letters,
+        t_letters,
+        w_letters,
+        y_letters,
+        g_letters,
+        z_letters,
+        d_letters,
+        b_letters,
+        p_letters,
         allLetters: [
-          ...props.letters.constant_letters,
-          ...props.letters.h_letters,
-          ...props.letters.k_letters,
-          ...props.letters.m_letters,
-          ...props.letters.n_letters,
-          ...props.letters.r_letters,
-          ...props.letters.s_letters,
-          ...props.letters.t_letters,
-          ...props.letters.w_letters,
-          ...props.letters.y_letters,
-          ...props.letters.g_letters,
-          ...props.letters.z_letters,
-          ...props.letters.d_letters,
-          ...props.letters.b_letters,
-          ...props.letters.p_letters
+          ...constant_letters,
+          ...h_letters,
+          ...k_letters,
+          ...m_letters,
+          ...n_letters,
+          ...r_letters,
+          ...s_letters,
+          ...t_letters,
+          ...w_letters,
+          ...y_letters,
+          ...g_letters,
+          ...z_letters,
+          ...d_letters,
+          ...b_letters,
+          ...p_letters
         ]
       })
     }
@@ -71,6 +101,20 @@ const LettersGame = (props) => {
   const [selectedLetters, setSelectedLetters] = useState([])
   const [selectedLettersNames, setSelectedLettersNames] = useState([])
   const [streak, setStreak] = useState(0)
+
+  useEffect(() => {
+    const listener = (event) => {
+      if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+        console.log('Enter key was pressed. Run your function.')
+        event.preventDefault()
+        document.getElementById('inputButton').click()
+      }
+    }
+    document.addEventListener('keydown', listener)
+    return () => {
+      document.removeEventListener('keydown', listener)
+    }
+  }, [])
 
   useEffect(() => {
     const inputAnswer = document.getElementById('inputAnswer')
@@ -131,12 +175,16 @@ const LettersGame = (props) => {
     reset ? setStreak(0) : setStreak(streak + 1)
   }
 
-  const getFeedbackMessage = (answer) => {
+  const renderCorrectAnswer = () => {
+    return correctAnswerObject.english_meaning[0]
+  }
+
+  const getFeedbackMessages = (answer) => {
     if (answer) {
       setFeedbackAnswer('Correcto!')
       updateStreak()
     } else {
-      setFeedbackAnswer('Incorrecto :(')
+      setFeedbackAnswer('ERROR! Correct answer: ' + renderCorrectAnswer())
       updateStreak('reset')
     }
   }
@@ -145,14 +193,14 @@ const LettersGame = (props) => {
     if (props.kanji) {
       const correctAnswerArray = correctAnswerObject.english_meaning
       correctAnswerArray.includes(valueFromInput)
-        ? getFeedbackMessage(true)
-        : getFeedbackMessage()
+        ? getFeedbackMessages(true)
+        : getFeedbackMessages()
       nextQuestion()
     } else {
       const correctAnswer = correctAnswerObject.latin_letter
       valueFromInput === correctAnswer
-        ? getFeedbackMessage(true)
-        : getFeedbackMessage()
+        ? getFeedbackMessages(true)
+        : getFeedbackMessages()
       nextQuestion()
     }
   }
@@ -190,7 +238,8 @@ const LettersGame = (props) => {
           kanjis_1_20: gameVariables.kanjis_1_20,
           kanjis_21_40: gameVariables.kanjis_21_40,
           kanjis_41_60: gameVariables.kanjis_41_60,
-          kanjis_61_80: gameVariables.kanjis_61_80
+          kanjis_61_80: gameVariables.kanjis_61_80,
+          kanjis_81_100: gameVariables.kanjis_81_100
         }[name]
       } else {
         selectedGroup = {
@@ -223,7 +272,6 @@ const LettersGame = (props) => {
   }
 
   const handleKeypress = (e) => {
-    console.log(e.keyCode)
     if (e.keyCode === 13) {
       checkForAnswer()
     }
@@ -386,6 +434,12 @@ const LettersGame = (props) => {
           </button>
           <button
             className="selectLetterButton"
+            onClick={() => updateStates('kanjis_81_100')}
+          >
+            81-100 Most Used
+          </button>
+          <button
+            className="selectLetterButton"
             onClick={() => updateStates('own_kanjis')}
           >
             My own Kanjis
@@ -413,8 +467,7 @@ const LettersGame = (props) => {
     )
   }
 
-  const prueba = (event)=>{
-    console.log(event)
+  const prueba = (event) => {
     setValueFromInput(event.target.value.toLowerCase())
   }
 
@@ -430,12 +483,14 @@ const LettersGame = (props) => {
           id="inputAnswer"
           type="text"
           value={valueFromInput}
-          onChange={(event) =>
-            prueba(event)
-          }
+          onChange={(event) => prueba(event)}
           onKeyPress={handleKeypress}
         />
-        <button className="inputButton" onClick={() => checkForAnswer()}>
+        <button
+          id="inputButton"
+          className="inputButton"
+          onClick={() => checkForAnswer()}
+        >
           Check answer
         </button>
         <div className="feedback_container">

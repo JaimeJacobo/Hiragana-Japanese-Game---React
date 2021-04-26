@@ -9,22 +9,17 @@ const Home = () => {
       <div className="link">
         <Link to="/hiragana/letters">Play with letters</Link>
       </div>
-      <div className="link">
-        <Link to="/hiragana/words">Play with words (soon)</Link>
-      </div>
       <h2>Katakana Game</h2>
       <div className="link">
         <Link to="/katakana/letters">Play with letters</Link>
-      </div>
-      <div className="link">
-        <Link to="/words">Play with words (soon)</Link>
       </div>
       <h2>Kanjis Game</h2>
       <div className="link">
         <Link to="/kanji">Play with Kanjis</Link>
       </div>
+      <h2>Words Game</h2>
       <div className="link">
-        <Link to="/words">Play with words (soon)</Link>
+        <Link to="/words">Play with words</Link>
       </div>
     </div>
   )
