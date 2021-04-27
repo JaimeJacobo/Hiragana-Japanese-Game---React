@@ -65,68 +65,66 @@
     "onyomi": []
   },
   {
-    "letter": "決",
-    "english_meaning": ["decide", "to decide", "agree", "to agree"],
+    "letter": "当",
+    "english_meaning": ["to be hit", "to strike", "hit", "strike"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "子",
-    "english_meaning": ["child", "kid"],
+    "letter": "八",
+    "english_meaning": ["eight", "8"],
     "kunyomi": ["こ"],
     "onyomi": ["シ"]
   },
   {
-    "letter": "動",
-    "english_meaning": ["movement", "to move", "move", "motion"],
+    "letter": "六",
+    "english_meaning": ["six"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "京",
-    "english_meaning": ["capital"],
+    "letter": "約",
+    "english_meaning": ["shrink", "to shrink", "compress", "to compress"],
     "kunyomi": [],
     "onyomi": ["キョウ"]
   },
   {
-    "letter": "全",
-    "english_meaning": ["whole", "entire", "all", "complete", "fullfill"],
+    "letter": "主",
+    "english_meaning": ["lord", "chief", "master", "head", "leader", "main"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "目",
-    "english_meaning": ["eye", "eyeball", "look"],
-    "kunyomi": ["め"],
-    "onyomi": ["モク"]
+    "letter": "題",
+    "english_meaning": ["topic", "subject"],
+    "kunyomi": [""],
+    "onyomi": [""]
   },
   {
-    "letter": "表",
-    "english_meaning": ["visible part of", "visible part"],
+    "letter": "下",
+    "english_meaning": ["below", "down", "inferior", "low"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "戦",
-    "english_meaning": ["war", "battle", "match"],
+    "letter": "首",
+    "english_meaning": ["neck"],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "経",
+    "letter": "意",
     "english_meaning": [
-      "go through",
-      "to go through",
-      "to go by",
-      "go by",
-      "through"
+      "idea",
+      "feelings",
+      "thoughts"
     ],
     "kunyomi": [],
     "onyomi": []
   },
   {
-    "letter": "通",
-    "english_meaning": ["traffic", "commute"],
+    "letter": "法",
+    "english_meaning": ["rule", "method", "principle"],
     "kunyomi": [""],
     "onyomi": [""]
   }
