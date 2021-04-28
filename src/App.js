@@ -48,6 +48,7 @@ import own_kanjis_2 from './json/kanji/own_kanjis_2.json'
 
 //WORDS
 import verbs from './json/words/verbs.json'
+import days from './json/words/days.json'
 
 const App = () => {
   return (
@@ -127,7 +128,7 @@ const App = () => {
           <Route
             exact
             path="/words"
-            component={() => <LettersGame words letters={{ verbs }} />}
+            component={() => <LettersGame words letters={{ verbs, days }} />}
           />
         </div>
       </Router>

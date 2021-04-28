@@ -6,10 +6,9 @@
     "onyomi": [""]
   },
   {
-    "letter": "のみます",
+    "letter": "飲みます",
     "english_meaning": ["to drink", "drink"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "のみます"
   },
   {
     "letter": "します",
@@ -18,10 +17,9 @@
     "onyomi": [""]
   },
   {
-    "letter": "みます",
+    "letter": "見ます",
     "english_meaning": ["to see", "see"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "みます"
   },
   {
     "letter": "かきます",
@@ -36,10 +34,9 @@
     "onyomi": [""]
   },
   {
-    "letter": "ききます",
+    "letter": "聞きます",
     "english_meaning": ["to hear", "hear", "to listen", "listen"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "ききます"
   },
   {
     "letter": "いきます",
@@ -60,10 +57,9 @@
     "onyomi": [""]
   },
   {
-    "letter": "おきます",
+    "letter": "起きます",
     "english_meaning": ["to wake up", "wake up"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "あきます"
   },
   {
     "letter": "きます",
@@ -78,10 +74,9 @@
     "onyomi": [""]
   },
   {
-    "letter": "うんどうをします",
-    "english_meaning": ["to excercise", "excercise"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "letter": "運動をします",
+    "english_meaning": ["to exercise", "exercise"],
+    "hiragana": "うんどうをします"
   },
   {
     "letter": "テレビをみます",

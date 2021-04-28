@@ -1,0 +1,67 @@
+[
+  {
+    "letter": "月曜日",
+    "english_meaning": ["monday"],
+    "hiragana": "げつようび"
+  },
+  {
+    "letter": "火曜日",
+    "english_meaning": ["tuesday"],
+    "hiragana": "かようび"
+  },
+  {
+    "letter": "水曜日",
+    "english_meaning": ["wednesday"],
+    "hiragana": "すいようび"
+  },
+  {
+    "letter": "木曜日",
+    "english_meaning": ["thursday"],
+    "hiragana": "もくようび"
+  },
+  {
+    "letter": "金曜日",
+    "english_meaning": ["friday"],
+    "hiragana": "きんようび"
+  },
+  {
+    "letter": "土曜日",
+    "english_meaning": ["saturday"],
+    "hiragana": "どようび"
+  },
+  {
+    "letter": "日曜日",
+    "english_meaning": ["sunday"],
+    "hiragana": "にちようび"
+  },
+  {
+    "letter": "今日",
+    "english_meaning": ["today"],
+    "hiragana": "きょう"
+  },
+  {
+    "letter": "明日",
+    "english_meaning": ["tomorrow"],
+    "hiragana": "あした"
+  },
+  {
+    "letter": "昨日",
+    "english_meaning": ["yesterday"],
+    "hiragana": "きのう"
+  },
+  {
+    "letter": "今週",
+    "english_meaning": ["this week"],
+    "hiragana": "こんしゅう"
+  },
+  {
+    "letter": "先週",
+    "english_meaning": ["the week before", "week before"],
+    "hiragana": "せんしゅう"
+  },
+  {
+    "letter": "来週",
+    "english_meaning": ["next week", "the next week"],
+    "hiragana": "らいしゅう"
+  }
+]

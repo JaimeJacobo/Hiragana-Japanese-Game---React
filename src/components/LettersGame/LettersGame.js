@@ -55,7 +55,8 @@ const LettersGame = (props) => {
     } else if (props.words) {
       setGameVariables({
         verbs: props.letters.verbs,
-        allWords: [...props.letters.verbs]
+        days: props.letters.days,
+        allWords: [...props.letters.verbs, ...props.letters.days]
       })
     } else {
       setGameVariables({
@@ -284,7 +285,8 @@ const LettersGame = (props) => {
       } else if (props.words) {
         selectedGroup = {
           allWords: gameVariables.allWords,
-          verbs: gameVariables.verbs
+          verbs: gameVariables.verbs,
+          days: gameVariables.days
         }[name]
       } else {
         selectedGroup = {
@@ -518,6 +520,12 @@ const LettersGame = (props) => {
             onClick={() => updateStates('verbs')}
           >
             Verbs
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('days')}
+          >
+            Days
           </button>
           <button
             className="selectLetterButton"
