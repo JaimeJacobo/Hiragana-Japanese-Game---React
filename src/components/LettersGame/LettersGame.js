@@ -97,8 +97,10 @@ const LettersGame = (props) => {
 
   let previousAnswer = {}
 
+  const [gameType, setGameType] = useState('')
   const [correctAnswerObject, setCorrectAnswerObject] = useState({
-    letter: ':)'
+    letter: ':)',
+    english_meaning: [':)']
   })
   const [valueFromInput, setValueFromInput] = useState('')
   const [feedbackAnswer, setFeedbackAnswer] = useState('')
@@ -108,6 +110,15 @@ const LettersGame = (props) => {
   const [streak, setStreak] = useState(0)
 
   useEffect(() => {
+    //Set the type of game (kanji, words or letters)
+    if (props.kanji) {
+      setGameType('kanji')
+    } else if (props.words) {
+      setGameType('words')
+    } else {
+      setGameType('letters')
+    }
+
     const listener = (event) => {
       if (event.code === 'Enter' || event.code === 'NumpadEnter') {
         console.log('Enter key was pressed. Run your function.')
@@ -152,12 +163,16 @@ const LettersGame = (props) => {
     }
   }
 
-  const renderRandomLetter = () => {
+  const renderRandomLetter = (type) => {
     if (correctAnswerObject.letter === ':)') {
       renderFirstQuestion()
     }
 
-    return correctAnswerObject.letter
+    if (type !== 'words') {
+      return correctAnswerObject.letter
+    } else {
+      return correctAnswerObject.english_meaning[0]
+    }
   }
 
   const clearInputs = () => {
@@ -180,17 +195,27 @@ const LettersGame = (props) => {
     reset ? setStreak(0) : setStreak(streak + 1)
   }
 
-  const renderCorrectAnswer = () => {
-    return correctAnswerObject.english_meaning[0]
+  const renderCorrectAnswer = (type) => {
+    if (type === 'words') {
+      return correctAnswerObject.letter
+    } else {
+      return correctAnswerObject.english_meaning[0]
+    }
   }
 
-  const getFeedbackMessages = (answer) => {
+  const getFeedbackMessages = (answer, type) => {
     if (answer) {
       setFeedbackAnswer('Correcto!')
       updateStreak()
     } else {
-      if (props.kanji || props.words) {
-        setFeedbackAnswer('ERROR! Correct answer: ' + renderCorrectAnswer())
+      if (props.kanji) {
+        setFeedbackAnswer(
+          'ERROR! Correct answer: ' + renderCorrectAnswer('kanji')
+        )
+      } else if (props.words) {
+        setFeedbackAnswer(
+          'ERROR! Correct answer: ' + renderCorrectAnswer('words')
+        )
       } else {
         setFeedbackAnswer('ERROR!')
       }
@@ -199,16 +224,22 @@ const LettersGame = (props) => {
   }
 
   const checkForAnswer = () => {
-    if (props.kanji || props.words) {
+    if (props.kanji) {
       const correctAnswerArray = correctAnswerObject.english_meaning
       correctAnswerArray.includes(valueFromInput)
-        ? getFeedbackMessages(true)
+        ? getFeedbackMessages(true, 'kanji')
+        : getFeedbackMessages()
+      nextQuestion()
+    } else if (props.words) {
+      const correctAnswerArray = correctAnswerObject.letter
+      correctAnswerArray === valueFromInput
+        ? getFeedbackMessages(true, 'words')
         : getFeedbackMessages()
       nextQuestion()
     } else {
       const correctAnswer = correctAnswerObject.latin_letter
       valueFromInput === correctAnswer
-        ? getFeedbackMessages(true)
+        ? getFeedbackMessages(true, 'letters')
         : getFeedbackMessages()
       nextQuestion()
     }
@@ -504,9 +535,9 @@ const LettersGame = (props) => {
         <button onClick={() => setGroupOfLetters([...selectedLetters])}>
           Play ENGLISH to JAPANESE
         </button>
-        <button onClick={() => setGroupOfLetters([...selectedLetters])}>
+        {/* <button onClick={() => setGroupOfLetters([...selectedLetters])}>
           Play JAPANESE to ENGLISH
-        </button>
+        </button> */}
         <button onClick={() => cleanStates()}>CLEAN</button>
       </React.Fragment>
     )
@@ -532,7 +563,7 @@ const LettersGame = (props) => {
         <div>
           <p className="streak">Streak: {streak}</p>
         </div>
-        <div className="letter">{renderRandomLetter()}</div>
+        <div className="letter" style={{fontSize: props.words ? 50 : 300}}>{renderRandomLetter(gameType)}</div>
         <input
           autoFocus
           id="inputAnswer"
