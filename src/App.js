@@ -119,7 +119,6 @@ const App = () => {
                   kanjis_21_40,
                   kanjis_41_60,
                   kanjis_61_80,
-                  kanjis_81_100,
                   kanjis_81_100
                 }}
               />
@@ -127,8 +126,17 @@ const App = () => {
           />
           <Route
             exact
-            path="/words"
-            component={() => <LettersGame words letters={{ verbs, days }} />}
+            path="/wordsEnToJap"
+            component={() => (
+              <LettersGame wordsEnToJap letters={{ verbs, days }} />
+            )}
+          />
+          <Route
+            exact
+            path="/wordsJapToEn"
+            component={() => (
+              <LettersGame wordsJapToEn letters={{ verbs, days }} />
+            )}
           />
         </div>
       </Router>

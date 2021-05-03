@@ -52,7 +52,7 @@ const LettersGame = (props) => {
           ...kanjis_81_100
         ]
       })
-    } else if (props.words) {
+    } else if (props.wordsEnToJap || props.wordsJapToEn) {
       setGameVariables({
         verbs: props.letters.verbs,
         days: props.letters.days,
@@ -114,8 +114,10 @@ const LettersGame = (props) => {
     //Set the type of game (kanji, words or letters)
     if (props.kanji) {
       setGameType('kanji')
-    } else if (props.words) {
-      setGameType('words')
+    } else if (props.wordsEnToJap) {
+      setGameType('wordsEnToJap')
+    } else if (props.wordsJapToEn) {
+      setGameType('wordsJapToEn')
     } else {
       setGameType('letters')
     }
@@ -169,9 +171,9 @@ const LettersGame = (props) => {
       renderFirstQuestion()
     }
 
-    if (type !== 'words') {
+    if (type === 'kanji' || type === 'wordsJapToEn' || type === 'letters') {
       return correctAnswerObject.letter
-    } else {
+    } else if (type === 'words' || type === 'wordsEnToJap') {
       return correctAnswerObject.english_meaning[0]
     }
   }
@@ -197,7 +199,7 @@ const LettersGame = (props) => {
   }
 
   const renderCorrectAnswer = (type) => {
-    if (type === 'words') {
+    if (type === 'words' || type === 'wordsEnToJap') {
       return correctAnswerObject.letter
     } else {
       return correctAnswerObject.english_meaning[0]
@@ -213,9 +215,13 @@ const LettersGame = (props) => {
         setFeedbackAnswer(
           'ERROR! Correct answer: ' + renderCorrectAnswer('kanji')
         )
-      } else if (props.words) {
+      } else if (props.wordsEnToJap) {
         setFeedbackAnswer(
-          'ERROR! Correct answer: ' + renderCorrectAnswer('words')
+          'ERROR! Correct answer: ' + renderCorrectAnswer('wordsEnToJap')
+        )
+      } else if (props.wordsJapToEn) {
+        setFeedbackAnswer(
+          'ERROR! Correct answer: ' + renderCorrectAnswer('wordsJapToEn')
         )
       } else {
         setFeedbackAnswer('ERROR!')
@@ -231,9 +237,15 @@ const LettersGame = (props) => {
         ? getFeedbackMessages(true, 'kanji')
         : getFeedbackMessages()
       nextQuestion()
-    } else if (props.words) {
+    } else if (props.wordsEnToJap) {
       const correctAnswerArray = correctAnswerObject.letter
       correctAnswerArray === valueFromInput
+        ? getFeedbackMessages(true, 'words')
+        : getFeedbackMessages()
+      nextQuestion()
+    } else if (props.wordsJapToEn) {
+      const correctAnswerArray = correctAnswerObject.english_meaning
+      correctAnswerArray.includes(valueFromInput)
         ? getFeedbackMessages(true, 'words')
         : getFeedbackMessages()
       nextQuestion()
@@ -282,7 +294,7 @@ const LettersGame = (props) => {
           kanjis_61_80: gameVariables.kanjis_61_80,
           kanjis_81_100: gameVariables.kanjis_81_100
         }[name]
-      } else if (props.words) {
+      } else if (props.wordsEnToJap || props.wordsJapToEn) {
         selectedGroup = {
           allWords: gameVariables.allWords,
           verbs: gameVariables.verbs,
@@ -555,7 +567,7 @@ const LettersGame = (props) => {
     if (groupOfLetters.length === 0) {
       if (props.kanji) {
         return renderKanjiSelectGroupScreen()
-      } else if (props.words) {
+      } else if (props.wordsEnToJap || props.wordsJapToEn) {
         return renderWordsSelectGroupScreen()
       } else {
         return renderLetterSelectGroupScreen()
@@ -571,7 +583,14 @@ const LettersGame = (props) => {
         <div>
           <p className="streak">Streak: {streak}</p>
         </div>
-        <div className="letter" style={{fontSize: props.words ? 50 : 300}}>{renderRandomLetter(gameType)}</div>
+        <div
+          className="letter"
+          style={{
+            fontSize: props.wordsEnToJap || props.wordsJapToEn ? 50 : 300
+          }}
+        >
+          {renderRandomLetter(gameType)}
+        </div>
         <input
           autoFocus
           id="inputAnswer"

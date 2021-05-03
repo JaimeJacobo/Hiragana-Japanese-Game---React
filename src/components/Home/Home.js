@@ -17,9 +17,13 @@ const Home = () => {
       <div className="link">
         <Link to="/kanji">Play with Kanjis</Link>
       </div>
-      <h2>Words Game</h2>
+      <h2>Words Game (En to jap)</h2>
       <div className="link">
-        <Link to="/words">Play with words</Link>
+        <Link to="/wordsEnToJap">Play with words</Link>
+      </div>
+      <h2>Words Game (Jap to en)</h2>
+      <div className="link">
+        <Link to="/wordsJapToEn">Play with words</Link>
       </div>
     </div>
   )
