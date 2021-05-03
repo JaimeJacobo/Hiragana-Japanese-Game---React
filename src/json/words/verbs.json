@@ -1,9 +1,8 @@
 [
   {
-    "letter": "たべます",
+    "letter": "食べ",
     "english_meaning": ["to eat", "eat"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "たべます"
   },
   {
     "letter": "飲みます",
@@ -22,16 +21,14 @@
     "hiragana": "みます"
   },
   {
-    "letter": "かきます",
+    "letter": "書きます",
     "english_meaning": ["to draw", "draw", "write", "to write"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "かきます"
   },
   {
-    "letter": "よみます",
+    "letter": "読みます",
     "english_meaning": ["to read", "read"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "よみます"
   },
   {
     "letter": "聞きます",
@@ -39,22 +36,38 @@
     "hiragana": "ききます"
   },
   {
-    "letter": "いきます",
+    "letter": "行きます",
     "english_meaning": ["to go", "go"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "いきます"
   },
   {
-    "letter": "ねます",
+    "letter": "寝ます",
     "english_meaning": ["to sleep", "sleep"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "ねます"
   },
   {
-    "letter": "あります",
-    "english_meaning": ["to have", "have"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "letter": "有ります",
+    "english_meaning": [
+      "have (non-live)",
+      "have",
+      "to have",
+      "have",
+      "to be",
+      "be"
+    ],
+    "hiragana": ["あります"]
+  },
+  {
+    "letter": "在す",
+    "english_meaning": [
+      "have (alive)",
+      "have",
+      "to have",
+      "have",
+      "to be",
+      "be"
+    ],
+    "hiragana": "います"
   },
   {
     "letter": "起きます",
@@ -62,16 +75,15 @@
     "hiragana": "あきます"
   },
   {
-    "letter": "きます",
+    "letter": "来ます",
     "english_meaning": ["to come", "come"],
     "kunyomi": [""],
     "onyomi": [""]
   },
   {
-    "letter": "かえります",
+    "letter": "帰ります",
     "english_meaning": ["to return (natal)", "return (natal)"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "かえります"
   },
   {
     "letter": "運動をします",
@@ -79,15 +91,8 @@
     "hiragana": "うんどうをします"
   },
   {
-    "letter": "テレビをみます",
-    "english_meaning": ["to watch TV", "watch TV"],
-    "kunyomi": [""],
-    "onyomi": [""]
-  },
-  {
-    "letter": "ききます",
+    "letter": "聞きます",
     "english_meaning": ["to hear", "hear"],
-    "kunyomi": [""],
-    "onyomi": [""]
+    "hiragana": "ききます"
   }
 ]
