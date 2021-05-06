@@ -109,23 +109,37 @@
   },
   {
     "letter": "運",
-    "english_meaning": [
-      "carry",
-      "to carry",
-      "transport",
-      "to transport"
-    ],
+    "english_meaning": ["carry", "to carry", "transport", "to transport"],
     "kunyomi": [],
     "onyomi": []
   },
   {
     "letter": "有",
-    "english_meaning": [
-      "possess",
-      "to posses",
-      "have",
-      "to have"
-    ],
+    "english_meaning": ["possess", "to posses", "have", "to have"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "昨",
+    "english_meaning": ["previous"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "週",
+    "english_meaning": ["week"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "先",
+    "english_meaning": ["before", "previous"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "来",
+    "english_meaning": ["come", "coming", "the coming", "next"],
     "kunyomi": [],
     "onyomi": []
   }
