@@ -25,6 +25,7 @@ const LettersGame = (props) => {
   const {
     own_kanjis,
     own_kanjis_2,
+    own_kanjis_3,
     kanjis_1_20,
     kanjis_21_40,
     kanjis_41_60,
@@ -37,6 +38,7 @@ const LettersGame = (props) => {
       setGameVariables({
         own_kanjis,
         own_kanjis_2,
+        own_kanjis_3,
         kanjis_1_20,
         kanjis_21_40,
         kanjis_41_60,
@@ -45,6 +47,7 @@ const LettersGame = (props) => {
         allKanjis: [
           ...own_kanjis,
           ...own_kanjis_2,
+          ...own_kanjis_3,
           ...kanjis_1_20,
           ...kanjis_21_40,
           ...kanjis_41_60,
@@ -288,6 +291,7 @@ const LettersGame = (props) => {
           allKanjis: gameVariables.allKanjis,
           own_kanjis: gameVariables.own_kanjis,
           own_kanjis_2: gameVariables.own_kanjis_2,
+          own_kanjis_3: gameVariables.own_kanjis_3,
           kanjis_1_20: gameVariables.kanjis_1_20,
           kanjis_21_40: gameVariables.kanjis_21_40,
           kanjis_41_60: gameVariables.kanjis_41_60,
@@ -502,6 +506,12 @@ const LettersGame = (props) => {
             onClick={() => updateStates('own_kanjis_2')}
           >
             My own Kanjis 2
+          </button>
+          <button
+            className="selectLetterButton"
+            onClick={() => updateStates('own_kanjis_3')}
+          >
+            My own Kanjis 3
           </button>
         </div>
         <div>

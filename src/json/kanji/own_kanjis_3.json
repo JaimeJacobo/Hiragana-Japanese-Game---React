@@ -1,0 +1,132 @@
+[
+  {
+    "letter": "然",
+    "english_meaning": ["so", "if so", "in that case"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "楽",
+    "english_meaning": ["music", "comfort", "enjoyable", "fun", "to have fun"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "器",
+    "english_meaning": ["vessel", "instrument", "utensil"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "何",
+    "english_meaning": ["what"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "趣",
+    "english_meaning": ["interest", "purport"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "味",
+    "english_meaning": ["taste", "flavor"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "鮪",
+    "english_meaning": ["tuna"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "忙",
+    "english_meaning": ["busy", "occupied"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "食",
+    "english_meaning": ["eat", "food", "to eat"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "飲",
+    "english_meaning": ["drink", "to drink"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "書",
+    "english_meaning": ["write", "draw", "to draw", "to write"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "読",
+    "english_meaning": ["read", "to read"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "聞",
+    "english_meaning": ["hear", "to hear"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "寝",
+    "english_meaning": ["sleep", "to sleep", "lie down", "rest"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "在",
+    "english_meaning": ["to be", "to exist", "exist", "be", "have", "to have"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "起",
+    "english_meaning": ["wake up", "get up", "rouse"],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "帰",
+    "english_meaning": [
+      "homecoming",
+      "to come home",
+      "come home",
+      "return home",
+      "to return home"
+    ],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "運",
+    "english_meaning": [
+      "carry",
+      "to carry",
+      "transport",
+      "to transport"
+    ],
+    "kunyomi": [],
+    "onyomi": []
+  },
+  {
+    "letter": "有",
+    "english_meaning": [
+      "possess",
+      "to posses",
+      "have",
+      "to have"
+    ],
+    "kunyomi": [],
+    "onyomi": []
+  }
+]

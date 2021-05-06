@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "然して",
+    "english_meaning": ["and then", "and"],
+    "hiragana": "そして"
+  },
+  {
+    "letter": "外国",
+    "english_meaning": ["to drink", "drink"],
+    "hiragana": "がいこく"
+  },
+  {
+    "letter": "外国人",
+    "english_meaning": ["to do", "do"],
+    "hiragana": "がいこくじん"
+  },
+  {
+    "letter": "外国語",
+    "english_meaning": ["to see", "see"],
+    "hiragana": "がいこくご"
+  },
+  {
+    "letter": "楽器",
+    "english_meaning": ["to draw", "draw", "write", "to write"],
+    "hiragana": "がっき"
+  },
+  {
+    "letter": "何方も",
+    "english_meaning": ["to read", "read"],
+    "hiragana": "どちらも"
+  },
+  {
+    "letter": "全然",
+    "english_meaning": ["almost never"],
+    "hiragana": "ぜんぜん"
+  },
+  {
+    "letter": "時々",
+    "english_meaning": ["sometimes", "occasionally", "at times"],
+    "hiragana": "ときどき"
+  },
+  {
+    "letter": "趣味",
+    "english_meaning": ["hobby"],
+    "hiragana": "しゅみ"
+  },
+  {
+    "letter": "鮪",
+    "english_meaning": ["tuna"],
+    "hiragana": ["まぐろ"]
+  },
+  {
+    "letter": "忙しい",
+    "english_meaning": [
+      "have (alive)",
+      "have",
+      "to have",
+      "have",
+      "to be",
+      "be"
+    ],
+    "hiragana": "いそがしいです"
+  },
+  {
+    "letter": "楽しい",
+    "english_meaning": ["to come", "come"],
+    "hiragana": "たのしいです"
+  }
+]

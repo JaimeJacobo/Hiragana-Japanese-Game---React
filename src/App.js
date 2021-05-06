@@ -45,6 +45,7 @@ import kanjis_61_80 from './json/kanji/kanjis_61_80.json'
 import kanjis_81_100 from './json/kanji/kanjis_81_100.json'
 import own_kanjis from './json/kanji/own_kanjis.json'
 import own_kanjis_2 from './json/kanji/own_kanjis_2.json'
+import own_kanjis_3 from './json/kanji/own_kanjis_3.json'
 
 //WORDS
 import verbs from './json/words/verbs.json'
@@ -115,6 +116,7 @@ const App = () => {
                 letters={{
                   own_kanjis,
                   own_kanjis_2,
+                  own_kanjis_3,
                   kanjis_1_20,
                   kanjis_21_40,
                   kanjis_41_60,
